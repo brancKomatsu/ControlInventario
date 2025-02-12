@@ -1,0 +1,1 @@
+insert into lac (nombre_lac) values ('ATS20'), ('CSC10'), ('GI10L'), ('GI30L'), ('GI50L'), ('LAC00'), ('LAC10'), ('LAC14'), ('LAC20') 
