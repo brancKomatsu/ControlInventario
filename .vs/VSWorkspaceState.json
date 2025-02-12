@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Cliente",
+    "\\Cliente\\src",
+    "\\Cliente\\src\\components",
+    "\\Cliente\\src\\Paginas",
+    "\\Cliente\\src\\Servicios",
+    "\\Cliente\\Views",
+    "\\Servidor",
+    "\\Servidor\\database",
+    "\\Servidor\\routes"
+  ],
+  "SelectedNode": "\\Cliente\\src\\Paginas\\PaginaPrincipal.jsx",
+  "PreviewInSolutionExplorer": false
+}

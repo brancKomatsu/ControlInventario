@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|c:\\users\\branco.burotto\\source\\repos\\controlinventario\\cliente\\src\\paginas\\empleados.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|solutionrelative:cliente\\src\\paginas\\empleados.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|c:\\users\\branco.burotto\\source\\repos\\controlinventario\\servidor\\routes\\movimientos.routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|solutionrelative:servidor\\routes\\movimientos.routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|c:\\users\\branco.burotto\\source\\repos\\controlinventario\\cliente\\src\\servicios\\servicio.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|solutionrelative:cliente\\src\\servicios\\servicio.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|c:\\users\\branco.burotto\\source\\repos\\controlinventario\\cliente\\src\\components\\asignarequipo.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|solutionrelative:cliente\\src\\components\\asignarequipo.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|c:\\users\\branco.burotto\\source\\repos\\controlinventario\\cliente\\src\\paginas\\verequipos.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CD8BB192-751B-4A02-BFDA-B579D640BE33}|controlinventario.esproj|solutionrelative:cliente\\src\\paginas\\verequipos.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Empleados.jsx",
+              "DocumentMoniker": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Paginas\\Empleados.jsx",
+              "RelativeDocumentMoniker": "Cliente\\src\\Paginas\\Empleados.jsx",
+              "ToolTip": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Paginas\\Empleados.jsx",
+              "RelativeToolTip": "Cliente\\src\\Paginas\\Empleados.jsx",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-10T19:52:57.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "asignarEquipo.jsx",
+              "DocumentMoniker": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\components\\asignarEquipo.jsx",
+              "RelativeDocumentMoniker": "Cliente\\src\\components\\asignarEquipo.jsx",
+              "ToolTip": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\components\\asignarEquipo.jsx",
+              "RelativeToolTip": "Cliente\\src\\components\\asignarEquipo.jsx",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-10T19:49:41.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "verEquipos.jsx",
+              "DocumentMoniker": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Paginas\\verEquipos.jsx",
+              "RelativeDocumentMoniker": "Cliente\\src\\Paginas\\verEquipos.jsx",
+              "ToolTip": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Paginas\\verEquipos.jsx",
+              "RelativeToolTip": "Cliente\\src\\Paginas\\verEquipos.jsx",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-02-10T19:05:27.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Servicio.js",
+              "DocumentMoniker": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Servicios\\Servicio.js",
+              "RelativeDocumentMoniker": "Cliente\\src\\Servicios\\Servicio.js",
+              "ToolTip": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Cliente\\src\\Servicios\\Servicio.js",
+              "RelativeToolTip": "Cliente\\src\\Servicios\\Servicio.js",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-10T15:26:05.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "movimientos.routes.js",
+              "DocumentMoniker": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Servidor\\routes\\movimientos.routes.js",
+              "RelativeDocumentMoniker": "Servidor\\routes\\movimientos.routes.js",
+              "ToolTip": "C:\\Users\\branco.burotto\\source\\repos\\ControlInventario\\Servidor\\routes\\movimientos.routes.js",
+              "RelativeToolTip": "Servidor\\routes\\movimientos.routes.js",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAALIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-10T15:26:00.845Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

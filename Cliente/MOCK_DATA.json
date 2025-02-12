@@ -1,0 +1,3502 @@
+[
+    {
+        "id": 1,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo A706",
+        "Fecha de actualizacion": "7/11/2024",
+        "Persona a cargo": "Gerry Whebell"
+    },
+    {
+        "id": 2,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung X650",
+        "Fecha de actualizacion": "3/10/2024",
+        "Persona a cargo": "Annabal Chapier"
+    },
+    {
+        "id": 3,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Mate 9",
+        "Fecha de actualizacion": "9/26/2024",
+        "Persona a cargo": "Annmarie Allcott"
+    },
+    {
+        "id": 4,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A20e",
+        "Fecha de actualizacion": "10/29/2024",
+        "Persona a cargo": "Elmer Emerson"
+    },
+    {
+        "id": 5,
+        "Categoria": "HTC",
+        "Nombre": "HTC Wildfire E2",
+        "Fecha de actualizacion": "1/2/2025",
+        "Persona a cargo": "Carolynn Hazeldine"
+    },
+    {
+        "id": 6,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A51",
+        "Fecha de actualizacion": "4/9/2024",
+        "Persona a cargo": "Hollie Ilyushkin"
+    },
+    {
+        "id": 7,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo Reno4 F",
+        "Fecha de actualizacion": "1/13/2024",
+        "Persona a cargo": "Blinni Greenroyd"
+    },
+    {
+        "id": 8,
+        "Categoria": "Archos",
+        "Nombre": "Archos 50 Titanium",
+        "Fecha de actualizacion": "7/24/2024",
+        "Persona a cargo": "Pepillo Meaders"
+    },
+    {
+        "id": 9,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax A089 Bolt",
+        "Fecha de actualizacion": "7/29/2024",
+        "Persona a cargo": "Etienne Drynan"
+    },
+    {
+        "id": 10,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola T725",
+        "Fecha de actualizacion": "4/13/2024",
+        "Persona a cargo": "Blondell Lauder"
+    },
+    {
+        "id": 11,
+        "Categoria": "BLU",
+        "Nombre": "BLU Vivo XL3",
+        "Fecha de actualizacion": "12/5/2024",
+        "Persona a cargo": "Terra Kleisle"
+    },
+    {
+        "id": 12,
+        "Categoria": "HP",
+        "Nombre": "HP iPAQ h6310",
+        "Fecha de actualizacion": "7/3/2024",
+        "Persona a cargo": "Kai Normington"
+    },
+    {
+        "id": 13,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Timeport P7389",
+        "Fecha de actualizacion": "4/11/2024",
+        "Persona a cargo": "Leroy Roe"
+    },
+    {
+        "id": 14,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 210",
+        "Fecha de actualizacion": "8/28/2024",
+        "Persona a cargo": "Russell Tocque"
+    },
+    {
+        "id": 15,
+        "Categoria": "Plum",
+        "Nombre": "Plum Might Plus",
+        "Fecha de actualizacion": "5/1/2024",
+        "Persona a cargo": "Martin Temporal"
+    },
+    {
+        "id": 16,
+        "Categoria": "Spice",
+        "Nombre": "Spice Stellar 507 (Mi-507)",
+        "Fecha de actualizacion": "7/1/2024",
+        "Persona a cargo": "Skyler Vernau"
+    },
+    {
+        "id": 17,
+        "Categoria": "Asus",
+        "Nombre": "Asus ZenFone Live (L1) ZA550KL",
+        "Fecha de actualizacion": "7/7/2024",
+        "Persona a cargo": "Collette Rosedale"
+    },
+    {
+        "id": 18,
+        "Categoria": "BLU",
+        "Nombre": "BLU Grand X LTE",
+        "Fecha de actualizacion": "10/21/2024",
+        "Persona a cargo": "Shoshanna Tire"
+    },
+    {
+        "id": 19,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung S342i",
+        "Fecha de actualizacion": "12/25/2024",
+        "Persona a cargo": "Juieta Ockendon"
+    },
+    {
+        "id": 20,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone 858 Smart",
+        "Fecha de actualizacion": "11/14/2024",
+        "Persona a cargo": "Elihu Kearn"
+    },
+    {
+        "id": 21,
+        "Categoria": "Qtek",
+        "Nombre": "Qtek 8060",
+        "Fecha de actualizacion": "7/7/2024",
+        "Persona a cargo": "Paola Estcot"
+    },
+    {
+        "id": 22,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Y3 (2018)",
+        "Fecha de actualizacion": "4/14/2024",
+        "Persona a cargo": "Tomkin Alford"
+    },
+    {
+        "id": 23,
+        "Categoria": "Bird",
+        "Nombre": "Bird S699",
+        "Fecha de actualizacion": "6/3/2024",
+        "Persona a cargo": "Cathyleen Mountain"
+    },
+    {
+        "id": 24,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone V-X760",
+        "Fecha de actualizacion": "11/22/2024",
+        "Persona a cargo": "Ursola Pafford"
+    },
+    {
+        "id": 25,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson K500",
+        "Fecha de actualizacion": "6/6/2024",
+        "Persona a cargo": "Shirlene Poulett"
+    },
+    {
+        "id": 26,
+        "Categoria": "Lava",
+        "Nombre": "Lava Iris 404 Flair",
+        "Fecha de actualizacion": "8/9/2024",
+        "Persona a cargo": "Lewie Borge"
+    },
+    {
+        "id": 27,
+        "Categoria": "Meizu",
+        "Nombre": "Meizu C9 Pro",
+        "Fecha de actualizacion": "5/23/2024",
+        "Persona a cargo": "Oralia Jakeman"
+    },
+    {
+        "id": 28,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Redmi Note 4 (MediaTek)",
+        "Fecha de actualizacion": "11/3/2024",
+        "Persona a cargo": "Vikki Edworthye"
+    },
+    {
+        "id": 29,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung I9500 Fraser",
+        "Fecha de actualizacion": "8/5/2024",
+        "Persona a cargo": "Lindy Dodman"
+    },
+    {
+        "id": 30,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola E770",
+        "Fecha de actualizacion": "8/12/2024",
+        "Persona a cargo": "Kristin Casone"
+    },
+    {
+        "id": 31,
+        "Categoria": "Spice",
+        "Nombre": "Spice Mi-438 Stellar Glide",
+        "Fecha de actualizacion": "7/31/2024",
+        "Persona a cargo": "Laurette O'Hogertie"
+    },
+    {
+        "id": 32,
+        "Categoria": "BLU",
+        "Nombre": "BLU Studio 5.5 S",
+        "Fecha de actualizacion": "12/16/2024",
+        "Persona a cargo": "Erik Coronado"
+    },
+    {
+        "id": 33,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo Joy Plus",
+        "Fecha de actualizacion": "3/5/2024",
+        "Persona a cargo": "Aprilette Brazenor"
+    },
+    {
+        "id": 34,
+        "Categoria": "Archos",
+        "Nombre": "Archos 53 Titanium",
+        "Fecha de actualizacion": "3/17/2024",
+        "Persona a cargo": "Kissie Justham"
+    },
+    {
+        "id": 35,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Ace 3",
+        "Fecha de actualizacion": "5/14/2024",
+        "Persona a cargo": "Chrysler Seear"
+    },
+    {
+        "id": 36,
+        "Categoria": "LG",
+        "Nombre": "LG L1100",
+        "Fecha de actualizacion": "8/28/2024",
+        "Persona a cargo": "Cully Minchenton"
+    },
+    {
+        "id": 37,
+        "Categoria": "BLU",
+        "Nombre": "BLU Studio G Max",
+        "Fecha de actualizacion": "6/6/2024",
+        "Persona a cargo": "La verne Akrigg"
+    },
+    {
+        "id": 38,
+        "Categoria": "Realme",
+        "Nombre": "Realme C20",
+        "Fecha de actualizacion": "12/8/2024",
+        "Persona a cargo": "Jereme Mallall"
+    },
+    {
+        "id": 39,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo A7x",
+        "Fecha de actualizacion": "5/22/2024",
+        "Persona a cargo": "Miof mela Caulfield"
+    },
+    {
+        "id": 40,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo A706",
+        "Fecha de actualizacion": "4/30/2024",
+        "Persona a cargo": "Major Youel"
+    },
+    {
+        "id": 41,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Skate",
+        "Fecha de actualizacion": "1/23/2024",
+        "Persona a cargo": "Ronna Andrichak"
+    },
+    {
+        "id": 42,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my411X",
+        "Fecha de actualizacion": "5/1/2024",
+        "Persona a cargo": "Sloan Prendeville"
+    },
+    {
+        "id": 43,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo IdeaTab A2107",
+        "Fecha de actualizacion": "3/16/2024",
+        "Persona a cargo": "Dieter Rany"
+    },
+    {
+        "id": 44,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon A7",
+        "Fecha de actualizacion": "9/29/2024",
+        "Persona a cargo": "Toby Baines"
+    },
+    {
+        "id": 45,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung U800 Soul b",
+        "Fecha de actualizacion": "3/13/2024",
+        "Persona a cargo": "Tallia Sims"
+    },
+    {
+        "id": 46,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE F600",
+        "Fecha de actualizacion": "5/5/2024",
+        "Persona a cargo": "Fitz Narrie"
+    },
+    {
+        "id": 47,
+        "Categoria": "Dell",
+        "Nombre": "Dell XCD35",
+        "Fecha de actualizacion": "8/6/2024",
+        "Persona a cargo": "Giffer Warrillow"
+    },
+    {
+        "id": 48,
+        "Categoria": "NEC",
+        "Nombre": "NEC N109",
+        "Fecha de actualizacion": "5/6/2024",
+        "Persona a cargo": "Carolyn MacGebenay"
+    },
+    {
+        "id": 49,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C404",
+        "Fecha de actualizacion": "11/10/2024",
+        "Persona a cargo": "Beret Innwood"
+    },
+    {
+        "id": 50,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy J7 Prime 2",
+        "Fecha de actualizacion": "9/12/2024",
+        "Persona a cargo": "Matt Esler"
+    },
+    {
+        "id": 51,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel 1S (2020)",
+        "Fecha de actualizacion": "11/3/2024",
+        "Persona a cargo": "Curran Ponting"
+    },
+    {
+        "id": 52,
+        "Categoria": "TCL",
+        "Nombre": "TCL 10 5G",
+        "Fecha de actualizacion": "3/5/2024",
+        "Persona a cargo": "Nari Lante"
+    },
+    {
+        "id": 53,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Y5 lite (2018)",
+        "Fecha de actualizacion": "4/24/2024",
+        "Persona a cargo": "Page Giovanazzi"
+    },
+    {
+        "id": 54,
+        "Categoria": "Siemens",
+        "Nombre": "Siemens A65",
+        "Fecha de actualizacion": "3/4/2024",
+        "Persona a cargo": "Yvon Priver"
+    },
+    {
+        "id": 55,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Fame S6810",
+        "Fecha de actualizacion": "10/31/2024",
+        "Persona a cargo": "Sammy Jonah"
+    },
+    {
+        "id": 56,
+        "Categoria": "Philips",
+        "Nombre": "Philips Xenium 9@9",
+        "Fecha de actualizacion": "8/13/2024",
+        "Persona a cargo": "Drusi Yeldon"
+    },
+    {
+        "id": 57,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE nubia Z7 Max",
+        "Fecha de actualizacion": "12/27/2024",
+        "Persona a cargo": "Ezekiel Ravens"
+    },
+    {
+        "id": 58,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 3208c",
+        "Fecha de actualizacion": "10/21/2024",
+        "Persona a cargo": "Cloris Collin"
+    },
+    {
+        "id": 59,
+        "Categoria": "vivo",
+        "Nombre": "vivo Y3s",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Aveline Vigers"
+    },
+    {
+        "id": 60,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson W995",
+        "Fecha de actualizacion": "3/20/2024",
+        "Persona a cargo": "Annie Ligoe"
+    },
+    {
+        "id": 61,
+        "Categoria": "LG",
+        "Nombre": "LG V30S ThinQ",
+        "Fecha de actualizacion": "3/11/2024",
+        "Persona a cargo": "Bertina Reuben"
+    },
+    {
+        "id": 62,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C70",
+        "Fecha de actualizacion": "11/11/2024",
+        "Persona a cargo": "Ardelle Liddell"
+    },
+    {
+        "id": 63,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPhone SE (2020)",
+        "Fecha de actualizacion": "12/8/2024",
+        "Persona a cargo": "Maureen Borell"
+    },
+    {
+        "id": 64,
+        "Categoria": "Spice",
+        "Nombre": "Spice Mi-510 Stellar Prime",
+        "Fecha de actualizacion": "4/7/2024",
+        "Persona a cargo": "Gilberta Jori"
+    },
+    {
+        "id": 65,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Armani",
+        "Fecha de actualizacion": "6/19/2024",
+        "Persona a cargo": "Bernie Blaasch"
+    },
+    {
+        "id": 66,
+        "Categoria": "Acer",
+        "Nombre": "Acer Liquid Gallant E350",
+        "Fecha de actualizacion": "1/12/2024",
+        "Persona a cargo": "Haydon Swindle"
+    },
+    {
+        "id": 67,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei nova 2",
+        "Fecha de actualizacion": "3/7/2024",
+        "Persona a cargo": "Candide Yukhnevich"
+    },
+    {
+        "id": 68,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-605",
+        "Fecha de actualizacion": "8/5/2024",
+        "Persona a cargo": "Lurleen Fitzgerald"
+    },
+    {
+        "id": 69,
+        "Categoria": "Cat",
+        "Nombre": "Cat B100",
+        "Fecha de actualizacion": "2/18/2024",
+        "Persona a cargo": "Brade Christall"
+    },
+    {
+        "id": 70,
+        "Categoria": "HTC",
+        "Nombre": "HTC Desire 516 dual sim",
+        "Fecha de actualizacion": "1/18/2024",
+        "Persona a cargo": "Torie Braunton"
+    },
+    {
+        "id": 71,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto G (3rd gen)",
+        "Fecha de actualizacion": "7/16/2024",
+        "Persona a cargo": "Janet Yaneev"
+    },
+    {
+        "id": 72,
+        "Categoria": "Spice",
+        "Nombre": "Spice Mi-449 3G",
+        "Fecha de actualizacion": "7/7/2024",
+        "Persona a cargo": "Esta Buglar"
+    },
+    {
+        "id": 73,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo Tab 4 8 Plus",
+        "Fecha de actualizacion": "2/3/2024",
+        "Persona a cargo": "Eleni Bayston"
+    },
+    {
+        "id": 74,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola EX210",
+        "Fecha de actualizacion": "3/15/2024",
+        "Persona a cargo": "Otis Duckitt"
+    },
+    {
+        "id": 75,
+        "Categoria": "LG",
+        "Nombre": "LG G3 Stylus",
+        "Fecha de actualizacion": "7/20/2024",
+        "Persona a cargo": "Rupert Babon"
+    },
+    {
+        "id": 76,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPhone 4s",
+        "Fecha de actualizacion": "10/1/2024",
+        "Persona a cargo": "Jackelyn Folcarelli"
+    },
+    {
+        "id": 77,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo K7x",
+        "Fecha de actualizacion": "2/17/2024",
+        "Persona a cargo": "Jose Prue"
+    },
+    {
+        "id": 78,
+        "Categoria": "Maxon",
+        "Nombre": "Maxon MX-3204",
+        "Fecha de actualizacion": "10/17/2024",
+        "Persona a cargo": "Kimball Balchin"
+    },
+    {
+        "id": 79,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Q66",
+        "Fecha de actualizacion": "5/18/2024",
+        "Persona a cargo": "Biron Jarrette"
+    },
+    {
+        "id": 80,
+        "Categoria": "HTC",
+        "Nombre": "HTC Desire VC",
+        "Fecha de actualizacion": "11/1/2024",
+        "Persona a cargo": "Rhetta Zorro"
+    },
+    {
+        "id": 81,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung S3030 Tobi",
+        "Fecha de actualizacion": "11/3/2024",
+        "Persona a cargo": "Harrison Alvarado"
+    },
+    {
+        "id": 82,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo K900",
+        "Fecha de actualizacion": "5/14/2024",
+        "Persona a cargo": "Rockie de Broke"
+    },
+    {
+        "id": 83,
+        "Categoria": "BLU",
+        "Nombre": "BLU Life Max",
+        "Fecha de actualizacion": "7/22/2024",
+        "Persona a cargo": "Morgan Scholar"
+    },
+    {
+        "id": 84,
+        "Categoria": "i-mobile",
+        "Nombre": "i-mobile i858",
+        "Fecha de actualizacion": "9/21/2024",
+        "Persona a cargo": "Florance Tabbitt"
+    },
+    {
+        "id": 85,
+        "Categoria": "vivo",
+        "Nombre": "vivo S1 Pro (China)",
+        "Fecha de actualizacion": "11/10/2024",
+        "Persona a cargo": "Mathilda Ablett"
+    },
+    {
+        "id": 86,
+        "Categoria": "Eten",
+        "Nombre": "Eten P300B",
+        "Fecha de actualizacion": "6/28/2024",
+        "Persona a cargo": "Enid Darbyshire"
+    },
+    {
+        "id": 87,
+        "Categoria": "Asus",
+        "Nombre": "Asus Zenfone 4 Max ZC554KL",
+        "Fecha de actualizacion": "10/17/2024",
+        "Persona a cargo": "Jeramey Merrick"
+    },
+    {
+        "id": 88,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem WA 3050",
+        "Fecha de actualizacion": "12/3/2024",
+        "Persona a cargo": "Milka McSpirron"
+    },
+    {
+        "id": 89,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my411c",
+        "Fecha de actualizacion": "11/9/2024",
+        "Persona a cargo": "Ambrosius Merring"
+    },
+    {
+        "id": 90,
+        "Categoria": "Asus",
+        "Nombre": "Asus M303",
+        "Fecha de actualizacion": "12/17/2024",
+        "Persona a cargo": "Appolonia McGilvary"
+    },
+    {
+        "id": 91,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my500X",
+        "Fecha de actualizacion": "2/27/2024",
+        "Persona a cargo": "Clarisse Cottam"
+    },
+    {
+        "id": 92,
+        "Categoria": "Microsoft",
+        "Nombre": "Microsoft Surface 2",
+        "Fecha de actualizacion": "11/14/2024",
+        "Persona a cargo": "Sigrid Mabbott"
+    },
+    {
+        "id": 93,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo Phab2 Plus",
+        "Fecha de actualizacion": "4/4/2024",
+        "Persona a cargo": "Georgie Weedon"
+    },
+    {
+        "id": 94,
+        "Categoria": "LG",
+        "Nombre": "LG C3400",
+        "Fecha de actualizacion": "6/7/2024",
+        "Persona a cargo": "Madelyn McAree"
+    },
+    {
+        "id": 95,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech Jest",
+        "Fecha de actualizacion": "8/21/2024",
+        "Persona a cargo": "Job Viles"
+    },
+    {
+        "id": 96,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia E62",
+        "Fecha de actualizacion": "3/7/2024",
+        "Persona a cargo": "Perren Viggers"
+    },
+    {
+        "id": 97,
+        "Categoria": "HTC",
+        "Nombre": "HTC P3400",
+        "Fecha de actualizacion": "1/22/2024",
+        "Persona a cargo": "Lucho Andreu"
+    },
+    {
+        "id": 98,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Axon Elite",
+        "Fecha de actualizacion": "5/28/2024",
+        "Persona a cargo": "Hubert Hunnable"
+    },
+    {
+        "id": 99,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Z110",
+        "Fecha de actualizacion": "12/7/2024",
+        "Persona a cargo": "Elsa Lahive"
+    },
+    {
+        "id": 100,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo F5 Youth",
+        "Fecha de actualizacion": "5/20/2024",
+        "Persona a cargo": "Helaina Clifton"
+    },
+    {
+        "id": 101,
+        "Categoria": "Acer",
+        "Nombre": "Acer Liquid Z530",
+        "Fecha de actualizacion": "8/21/2024",
+        "Persona a cargo": "Eb Conachy"
+    },
+    {
+        "id": 102,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem MY X1-2",
+        "Fecha de actualizacion": "6/15/2024",
+        "Persona a cargo": "Dev Hymas"
+    },
+    {
+        "id": 103,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A50s",
+        "Fecha de actualizacion": "1/16/2024",
+        "Persona a cargo": "Justino Dominec"
+    },
+    {
+        "id": 104,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto G 4G Dual SIM (2nd gen)",
+        "Fecha de actualizacion": "2/17/2024",
+        "Persona a cargo": "Isidora Sugge"
+    },
+    {
+        "id": 105,
+        "Categoria": "Spice",
+        "Nombre": "Spice Mi-449 3G",
+        "Fecha de actualizacion": "3/21/2024",
+        "Persona a cargo": "Savina O'Kielt"
+    },
+    {
+        "id": 106,
+        "Categoria": "Toshiba",
+        "Nombre": "Toshiba Excite 13 AT335",
+        "Fecha de actualizacion": "1/14/2024",
+        "Persona a cargo": "Ethelin Hutfield"
+    },
+    {
+        "id": 107,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Blade Q Mini",
+        "Fecha de actualizacion": "12/5/2024",
+        "Persona a cargo": "Almira Wattingham"
+    },
+    {
+        "id": 108,
+        "Categoria": "YU",
+        "Nombre": "YU Yunique 2",
+        "Fecha de actualizacion": "10/16/2024",
+        "Persona a cargo": "Breanne Satford"
+    },
+    {
+        "id": 109,
+        "Categoria": "Plum",
+        "Nombre": "Plum Check Plus",
+        "Fecha de actualizacion": "7/18/2024",
+        "Persona a cargo": "Carlin Alaway"
+    },
+    {
+        "id": 110,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon A225",
+        "Fecha de actualizacion": "12/13/2024",
+        "Persona a cargo": "Galen Millgate"
+    },
+    {
+        "id": 111,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE V96",
+        "Fecha de actualizacion": "12/7/2024",
+        "Persona a cargo": "Beauregard Lie"
+    },
+    {
+        "id": 112,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon A22",
+        "Fecha de actualizacion": "10/22/2024",
+        "Persona a cargo": "Guillema Ruff"
+    },
+    {
+        "id": 113,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech Matrix",
+        "Fecha de actualizacion": "5/31/2024",
+        "Persona a cargo": "Roda Bertolaccini"
+    },
+    {
+        "id": 114,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia Asha 201",
+        "Fecha de actualizacion": "7/30/2024",
+        "Persona a cargo": "Adrienne Maffei"
+    },
+    {
+        "id": 115,
+        "Categoria": "Coolpad",
+        "Nombre": "Coolpad Legacy",
+        "Fecha de actualizacion": "7/5/2024",
+        "Persona a cargo": "Salvatore Brevitt"
+    },
+    {
+        "id": 116,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE nubia N1",
+        "Fecha de actualizacion": "6/13/2024",
+        "Persona a cargo": "Clyve Sirl"
+    },
+    {
+        "id": 117,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 5730 XpressMusic",
+        "Fecha de actualizacion": "11/7/2024",
+        "Persona a cargo": "Courtney MacMorland"
+    },
+    {
+        "id": 118,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo A690",
+        "Fecha de actualizacion": "11/1/2024",
+        "Persona a cargo": "Julie Kellock"
+    },
+    {
+        "id": 119,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto G5S Plus",
+        "Fecha de actualizacion": "1/27/2024",
+        "Persona a cargo": "Archer Iacobacci"
+    },
+    {
+        "id": 120,
+        "Categoria": "LG",
+        "Nombre": "LG S365",
+        "Fecha de actualizacion": "5/29/2024",
+        "Persona a cargo": "Lamar Setford"
+    },
+    {
+        "id": 121,
+        "Categoria": "BLU",
+        "Nombre": "BLU Studio X8 HD (2019)",
+        "Fecha de actualizacion": "4/20/2024",
+        "Persona a cargo": "Ynes Cleal"
+    },
+    {
+        "id": 122,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Note20 Ultra 5G",
+        "Fecha de actualizacion": "4/15/2024",
+        "Persona a cargo": "Mayne Maynell"
+    },
+    {
+        "id": 123,
+        "Categoria": "Spice",
+        "Nombre": "Spice KT-5353",
+        "Fecha de actualizacion": "4/21/2024",
+        "Persona a cargo": "Kenon Schohier"
+    },
+    {
+        "id": 124,
+        "Categoria": "Allview",
+        "Nombre": "Allview X3 Soul Lite",
+        "Fecha de actualizacion": "9/11/2024",
+        "Persona a cargo": "Harlie Aire"
+    },
+    {
+        "id": 125,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung C110",
+        "Fecha de actualizacion": "1/17/2024",
+        "Persona a cargo": "Kelly Bullocke"
+    },
+    {
+        "id": 126,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C607",
+        "Fecha de actualizacion": "6/12/2024",
+        "Persona a cargo": "Kaylyn Please"
+    },
+    {
+        "id": 127,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola EX210",
+        "Fecha de actualizacion": "8/28/2024",
+        "Persona a cargo": "Brucie Mease"
+    },
+    {
+        "id": 128,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson T303",
+        "Fecha de actualizacion": "11/14/2024",
+        "Persona a cargo": "Gipsy Pursglove"
+    },
+    {
+        "id": 129,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei T156",
+        "Fecha de actualizacion": "8/26/2024",
+        "Persona a cargo": "Gerald Sollett"
+    },
+    {
+        "id": 130,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung L770",
+        "Fecha de actualizacion": "6/20/2024",
+        "Persona a cargo": "Denise Baffin"
+    },
+    {
+        "id": 131,
+        "Categoria": "LG",
+        "Nombre": "LG U960",
+        "Fecha de actualizacion": "7/21/2024",
+        "Persona a cargo": "Ralph Gilloran"
+    },
+    {
+        "id": 132,
+        "Categoria": "LG",
+        "Nombre": "LG Mach LS860",
+        "Fecha de actualizacion": "11/2/2024",
+        "Persona a cargo": "Christian Marcoolyn"
+    },
+    {
+        "id": 133,
+        "Categoria": "Energizer",
+        "Nombre": "Energizer Hardcase H241",
+        "Fecha de actualizacion": "9/10/2024",
+        "Persona a cargo": "Chrotoem Walcar"
+    },
+    {
+        "id": 134,
+        "Categoria": "Innostream",
+        "Nombre": "Innostream INNO 90",
+        "Fecha de actualizacion": "4/6/2024",
+        "Persona a cargo": "Ermentrude Marcus"
+    },
+    {
+        "id": 135,
+        "Categoria": "QMobile",
+        "Nombre": "QMobile Noir E2",
+        "Fecha de actualizacion": "11/15/2024",
+        "Persona a cargo": "Britta Westmancoat"
+    },
+    {
+        "id": 136,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my901C",
+        "Fecha de actualizacion": "12/8/2024",
+        "Persona a cargo": "Emmey Tullot"
+    },
+    {
+        "id": 137,
+        "Categoria": "Panasonic",
+        "Nombre": "Panasonic T21",
+        "Fecha de actualizacion": "10/14/2024",
+        "Persona a cargo": "Lee Louw"
+    },
+    {
+        "id": 138,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung X530",
+        "Fecha de actualizacion": "10/14/2024",
+        "Persona a cargo": "Giffard Hollingshead"
+    },
+    {
+        "id": 139,
+        "Categoria": "Amoi",
+        "Nombre": "Amoi H8",
+        "Fecha de actualizacion": "3/31/2024",
+        "Persona a cargo": "Desmond Bednall"
+    },
+    {
+        "id": 140,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6681",
+        "Fecha de actualizacion": "8/20/2024",
+        "Persona a cargo": "Leighton Taylerson"
+    },
+    {
+        "id": 141,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Star 2 Plus",
+        "Fecha de actualizacion": "7/8/2024",
+        "Persona a cargo": "Adena Jolliman"
+    },
+    {
+        "id": 142,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy S6 edge+ Duos",
+        "Fecha de actualizacion": "10/3/2024",
+        "Persona a cargo": "Andonis Trammel"
+    },
+    {
+        "id": 143,
+        "Categoria": "Allview",
+        "Nombre": "Allview P8 Energy",
+        "Fecha de actualizacion": "1/15/2024",
+        "Persona a cargo": "Boonie Coste"
+    },
+    {
+        "id": 144,
+        "Categoria": "LG",
+        "Nombre": "LG A250",
+        "Fecha de actualizacion": "5/13/2024",
+        "Persona a cargo": "Alfy Lawn"
+    },
+    {
+        "id": 145,
+        "Categoria": "Acer",
+        "Nombre": "Acer beTouch T500",
+        "Fecha de actualizacion": "4/3/2024",
+        "Persona a cargo": "Mil Almond"
+    },
+    {
+        "id": 146,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Canvas Infinity Pro",
+        "Fecha de actualizacion": "6/13/2024",
+        "Persona a cargo": "Casi Bending"
+    },
+    {
+        "id": 147,
+        "Categoria": "Karbonn",
+        "Nombre": "Karbonn A34",
+        "Fecha de actualizacion": "10/19/2024",
+        "Persona a cargo": "Nikola Cansdall"
+    },
+    {
+        "id": 148,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 3120",
+        "Fecha de actualizacion": "12/6/2024",
+        "Persona a cargo": "Babs Mearing"
+    },
+    {
+        "id": 149,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 110 (2019)",
+        "Fecha de actualizacion": "2/7/2024",
+        "Persona a cargo": "Mohandas Kropach"
+    },
+    {
+        "id": 150,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo A71",
+        "Fecha de actualizacion": "12/9/2024",
+        "Persona a cargo": "Arley Matusov"
+    },
+    {
+        "id": 151,
+        "Categoria": "Asus",
+        "Nombre": "Asus Zenfone 3 Deluxe ZS570KL",
+        "Fecha de actualizacion": "7/15/2024",
+        "Persona a cargo": "Reinaldo Tiptaft"
+    },
+    {
+        "id": 152,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung T409",
+        "Fecha de actualizacion": "12/18/2024",
+        "Persona a cargo": "Ariel Kinningley"
+    },
+    {
+        "id": 153,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 703",
+        "Fecha de actualizacion": "6/27/2024",
+        "Persona a cargo": "Cassy Sabater"
+    },
+    {
+        "id": 154,
+        "Categoria": "BLU",
+        "Nombre": "BLU Studio G Plus HD",
+        "Fecha de actualizacion": "11/8/2024",
+        "Persona a cargo": "Birch Gabbot"
+    },
+    {
+        "id": 155,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem MY C-3s",
+        "Fecha de actualizacion": "7/19/2024",
+        "Persona a cargo": "Merissa Martensen"
+    },
+    {
+        "id": 156,
+        "Categoria": "Posh",
+        "Nombre": "Posh Orion Mini S350",
+        "Fecha de actualizacion": "7/27/2024",
+        "Persona a cargo": "Becky Maylour"
+    },
+    {
+        "id": 157,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A12",
+        "Fecha de actualizacion": "11/20/2024",
+        "Persona a cargo": "Kirsteni Christopherson"
+    },
+    {
+        "id": 158,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A30s",
+        "Fecha de actualizacion": "5/17/2024",
+        "Persona a cargo": "Evered Ivermee"
+    },
+    {
+        "id": 159,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Fierce 4",
+        "Fecha de actualizacion": "1/16/2024",
+        "Persona a cargo": "Erik Crotty"
+    },
+    {
+        "id": 160,
+        "Categoria": "Siemens",
+        "Nombre": "Siemens C28",
+        "Fecha de actualizacion": "5/24/2024",
+        "Persona a cargo": "Clemmie Allright"
+    },
+    {
+        "id": 161,
+        "Categoria": "vivo",
+        "Nombre": "vivo Y93s",
+        "Fecha de actualizacion": "7/14/2024",
+        "Persona a cargo": "Melloney Squirrel"
+    },
+    {
+        "id": 162,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo Tab M8 (FHD)",
+        "Fecha de actualizacion": "2/6/2024",
+        "Persona a cargo": "Connie Lansdowne"
+    },
+    {
+        "id": 163,
+        "Categoria": "Spice",
+        "Nombre": "Spice Mi-502 Smartflo Pace2",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Caddric Burd"
+    },
+    {
+        "id": 164,
+        "Categoria": "Coolpad",
+        "Nombre": "Coolpad Note 5",
+        "Fecha de actualizacion": "2/21/2024",
+        "Persona a cargo": "Ivar McCoveney"
+    },
+    {
+        "id": 165,
+        "Categoria": "BlackBerry",
+        "Nombre": "BlackBerry Pearl 3G 9105",
+        "Fecha de actualizacion": "4/2/2024",
+        "Persona a cargo": "Eartha Rahill"
+    },
+    {
+        "id": 166,
+        "Categoria": "Tecno",
+        "Nombre": "Tecno Camon CX",
+        "Fecha de actualizacion": "3/7/2024",
+        "Persona a cargo": "Claudina Trippett"
+    },
+    {
+        "id": 167,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C44",
+        "Fecha de actualizacion": "3/22/2024",
+        "Persona a cargo": "Melloney Skea"
+    },
+    {
+        "id": 168,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto Z",
+        "Fecha de actualizacion": "2/21/2024",
+        "Persona a cargo": "Panchito Anney"
+    },
+    {
+        "id": 169,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 9300i",
+        "Fecha de actualizacion": "9/28/2024",
+        "Persona a cargo": "Allix Fitter"
+    },
+    {
+        "id": 170,
+        "Categoria": "O2",
+        "Nombre": "O2 Cosmo",
+        "Fecha de actualizacion": "6/13/2024",
+        "Persona a cargo": "Bettina Clacson"
+    },
+    {
+        "id": 171,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee Marathon M4",
+        "Fecha de actualizacion": "11/29/2024",
+        "Persona a cargo": "Luciano Claeskens"
+    },
+    {
+        "id": 172,
+        "Categoria": "LG",
+        "Nombre": "LG B2250",
+        "Fecha de actualizacion": "6/14/2024",
+        "Persona a cargo": "Adrien Brosetti"
+    },
+    {
+        "id": 173,
+        "Categoria": "Coolpad",
+        "Nombre": "Coolpad Cool Play 6",
+        "Fecha de actualizacion": "5/22/2024",
+        "Persona a cargo": "Kikelia Chinnock"
+    },
+    {
+        "id": 174,
+        "Categoria": "LG",
+        "Nombre": "LG KG800",
+        "Fecha de actualizacion": "1/4/2025",
+        "Persona a cargo": "Anita Laing"
+    },
+    {
+        "id": 175,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Tab A 8.4 (2020)",
+        "Fecha de actualizacion": "6/28/2024",
+        "Persona a cargo": "Rubi Simnell"
+    },
+    {
+        "id": 176,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C7045",
+        "Fecha de actualizacion": "10/23/2024",
+        "Persona a cargo": "Sylvia Chason"
+    },
+    {
+        "id": 177,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Pop Star LTE",
+        "Fecha de actualizacion": "12/6/2024",
+        "Persona a cargo": "Daloris Mapstone"
+    },
+    {
+        "id": 178,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone Smart N10",
+        "Fecha de actualizacion": "7/29/2024",
+        "Persona a cargo": "Marilin Mingasson"
+    },
+    {
+        "id": 179,
+        "Categoria": "Allview",
+        "Nombre": "Allview V2 Viper i4G",
+        "Fecha de actualizacion": "6/18/2024",
+        "Persona a cargo": "Max Gleasane"
+    },
+    {
+        "id": 180,
+        "Categoria": "HTC",
+        "Nombre": "HTC DROID ERIS",
+        "Fecha de actualizacion": "4/24/2024",
+        "Persona a cargo": "Winfield Hindes"
+    },
+    {
+        "id": 181,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung S9110",
+        "Fecha de actualizacion": "1/6/2025",
+        "Persona a cargo": "Ali Burker"
+    },
+    {
+        "id": 182,
+        "Categoria": "verykool",
+        "Nombre": "verykool R80L Granite II",
+        "Fecha de actualizacion": "11/18/2024",
+        "Persona a cargo": "Wakefield Staden"
+    },
+    {
+        "id": 183,
+        "Categoria": "LG",
+        "Nombre": "LG KF757 Secret",
+        "Fecha de actualizacion": "2/9/2024",
+        "Persona a cargo": "Case Gregh"
+    },
+    {
+        "id": 184,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon A15",
+        "Fecha de actualizacion": "9/6/2024",
+        "Persona a cargo": "Clyve Batt"
+    },
+    {
+        "id": 185,
+        "Categoria": "LG",
+        "Nombre": "LG K5",
+        "Fecha de actualizacion": "10/31/2024",
+        "Persona a cargo": "Nonie Dinjes"
+    },
+    {
+        "id": 186,
+        "Categoria": "XOLO",
+        "Nombre": "XOLO Q700",
+        "Fecha de actualizacion": "4/18/2024",
+        "Persona a cargo": "Bobbye Burgoin"
+    },
+    {
+        "id": 187,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE nubia M2 lite",
+        "Fecha de actualizacion": "11/12/2024",
+        "Persona a cargo": "Kathye Kiljan"
+    },
+    {
+        "id": 188,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto E5 Play Go",
+        "Fecha de actualizacion": "6/29/2024",
+        "Persona a cargo": "Gaile Vanderson"
+    },
+    {
+        "id": 189,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Blade A3 (2019)",
+        "Fecha de actualizacion": "10/16/2024",
+        "Persona a cargo": "Bruis Clampe"
+    },
+    {
+        "id": 190,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 3.1",
+        "Fecha de actualizacion": "5/13/2024",
+        "Persona a cargo": "Trip Driscoll"
+    },
+    {
+        "id": 191,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia N81 8GB",
+        "Fecha de actualizacion": "5/10/2024",
+        "Persona a cargo": "Aldwin Stennes"
+    },
+    {
+        "id": 192,
+        "Categoria": "Sony",
+        "Nombre": "Sony Xperia U",
+        "Fecha de actualizacion": "5/29/2024",
+        "Persona a cargo": "Elia Guido"
+    },
+    {
+        "id": 193,
+        "Categoria": "Gigabyte",
+        "Nombre": "Gigabyte GSmart Maya M1 v2",
+        "Fecha de actualizacion": "9/14/2024",
+        "Persona a cargo": "Floyd Capstack"
+    },
+    {
+        "id": 194,
+        "Categoria": "NEC",
+        "Nombre": "NEC N223i",
+        "Fecha de actualizacion": "6/9/2024",
+        "Persona a cargo": "Willie Stringer"
+    },
+    {
+        "id": 195,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Ninja A91",
+        "Fecha de actualizacion": "6/19/2024",
+        "Persona a cargo": "Sanford Moncey"
+    },
+    {
+        "id": 196,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo Yoga Smart Tab",
+        "Fecha de actualizacion": "8/3/2024",
+        "Persona a cargo": "Vasily Rickardsson"
+    },
+    {
+        "id": 197,
+        "Categoria": "Dell",
+        "Nombre": "Dell Venue 10 7000",
+        "Fecha de actualizacion": "2/12/2024",
+        "Persona a cargo": "Rosabel Ohrtmann"
+    },
+    {
+        "id": 198,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPhone SE (2020)",
+        "Fecha de actualizacion": "9/9/2024",
+        "Persona a cargo": "Jereme Furmenger"
+    },
+    {
+        "id": 199,
+        "Categoria": "Spice",
+        "Nombre": "Spice M-5161n",
+        "Fecha de actualizacion": "3/22/2024",
+        "Persona a cargo": "Ileana Pitcock"
+    },
+    {
+        "id": 200,
+        "Categoria": "Posh",
+        "Nombre": "Posh Orion S450",
+        "Fecha de actualizacion": "1/8/2025",
+        "Persona a cargo": "Kaleb De Robertis"
+    },
+    {
+        "id": 201,
+        "Categoria": "BLU",
+        "Nombre": "BLU EZ2Go",
+        "Fecha de actualizacion": "9/25/2024",
+        "Persona a cargo": "Cyndie Sokale"
+    },
+    {
+        "id": 202,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C17",
+        "Fecha de actualizacion": "3/3/2024",
+        "Persona a cargo": "Horacio Bakeup"
+    },
+    {
+        "id": 203,
+        "Categoria": "QMobile",
+        "Nombre": "QMobile Noir S9",
+        "Fecha de actualizacion": "2/1/2024",
+        "Persona a cargo": "Gilles Bremond"
+    },
+    {
+        "id": 204,
+        "Categoria": "LG",
+        "Nombre": "LG Univa E510",
+        "Fecha de actualizacion": "8/25/2024",
+        "Persona a cargo": "Christal Ribbon"
+    },
+    {
+        "id": 205,
+        "Categoria": "BLU",
+        "Nombre": "BLU Vivo X",
+        "Fecha de actualizacion": "12/2/2024",
+        "Persona a cargo": "Brannon Bariball"
+    },
+    {
+        "id": 206,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung F250",
+        "Fecha de actualizacion": "1/4/2025",
+        "Persona a cargo": "Gian Bacher"
+    },
+    {
+        "id": 207,
+        "Categoria": "XOLO",
+        "Nombre": "XOLO Play",
+        "Fecha de actualizacion": "3/9/2024",
+        "Persona a cargo": "Gweneth Langshaw"
+    },
+    {
+        "id": 208,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my750x",
+        "Fecha de actualizacion": "8/12/2024",
+        "Persona a cargo": "Hayley Gieraths"
+    },
+    {
+        "id": 209,
+        "Categoria": "verykool",
+        "Nombre": "verykool i122",
+        "Fecha de actualizacion": "12/24/2024",
+        "Persona a cargo": "Galvan Lideard"
+    },
+    {
+        "id": 210,
+        "Categoria": "Wiko",
+        "Nombre": "Wiko View2 Pro",
+        "Fecha de actualizacion": "12/21/2024",
+        "Persona a cargo": "Yule Fidgeon"
+    },
+    {
+        "id": 211,
+        "Categoria": "Wiko",
+        "Nombre": "Wiko View2 Pro",
+        "Fecha de actualizacion": "6/4/2024",
+        "Persona a cargo": "Kippie Linkie"
+    },
+    {
+        "id": 212,
+        "Categoria": "Energizer",
+        "Nombre": "Energizer U680S",
+        "Fecha de actualizacion": "12/21/2024",
+        "Persona a cargo": "Pavel Abella"
+    },
+    {
+        "id": 213,
+        "Categoria": "Posh",
+        "Nombre": "Posh Micro X S240",
+        "Fecha de actualizacion": "11/1/2024",
+        "Persona a cargo": "Allayne Semkins"
+    },
+    {
+        "id": 214,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung E830",
+        "Fecha de actualizacion": "2/16/2024",
+        "Persona a cargo": "Paolo Acuna"
+    },
+    {
+        "id": 215,
+        "Categoria": "O2",
+        "Nombre": "O2 Xphone",
+        "Fecha de actualizacion": "12/24/2024",
+        "Persona a cargo": "Angelina Gadesby"
+    },
+    {
+        "id": 216,
+        "Categoria": "NEC",
+        "Nombre": "NEC N700",
+        "Fecha de actualizacion": "5/18/2024",
+        "Persona a cargo": "Lenard Dampier"
+    },
+    {
+        "id": 217,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech Q80",
+        "Fecha de actualizacion": "10/15/2024",
+        "Persona a cargo": "Gage Durrad"
+    },
+    {
+        "id": 218,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 2626",
+        "Fecha de actualizacion": "9/10/2024",
+        "Persona a cargo": "Doloritas Deverale"
+    },
+    {
+        "id": 219,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola V878",
+        "Fecha de actualizacion": "6/18/2024",
+        "Persona a cargo": "Codi Tween"
+    },
+    {
+        "id": 220,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem my855c",
+        "Fecha de actualizacion": "1/27/2024",
+        "Persona a cargo": "Crysta Caulwell"
+    },
+    {
+        "id": 221,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Round G910S",
+        "Fecha de actualizacion": "6/8/2024",
+        "Persona a cargo": "Doris Sinkinson"
+    },
+    {
+        "id": 222,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT 153",
+        "Fecha de actualizacion": "2/28/2024",
+        "Persona a cargo": "Eldredge Drakes"
+    },
+    {
+        "id": 223,
+        "Categoria": "Lava",
+        "Nombre": "Lava A50",
+        "Fecha de actualizacion": "10/29/2024",
+        "Persona a cargo": "Aylmer Gyorffy"
+    },
+    {
+        "id": 224,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Note5",
+        "Fecha de actualizacion": "8/2/2024",
+        "Persona a cargo": "Rosita Semmence"
+    },
+    {
+        "id": 225,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia E72",
+        "Fecha de actualizacion": "6/20/2024",
+        "Persona a cargo": "Ludovico Masey"
+    },
+    {
+        "id": 226,
+        "Categoria": "Asus",
+        "Nombre": "Asus Zenfone 2 ZE551ML",
+        "Fecha de actualizacion": "2/8/2024",
+        "Persona a cargo": "Sheila-kathryn Lynthal"
+    },
+    {
+        "id": 227,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson K200",
+        "Fecha de actualizacion": "6/14/2024",
+        "Persona a cargo": "Aron Redmayne"
+    },
+    {
+        "id": 228,
+        "Categoria": "BenQ",
+        "Nombre": "BenQ F5",
+        "Fecha de actualizacion": "7/22/2024",
+        "Persona a cargo": "Nicolis Eyre"
+    },
+    {
+        "id": 229,
+        "Categoria": "Asus",
+        "Nombre": "Asus ROG Phone ZS600KL",
+        "Fecha de actualizacion": "3/12/2024",
+        "Persona a cargo": "Wilfred Yitzovitz"
+    },
+    {
+        "id": 230,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-108",
+        "Fecha de actualizacion": "8/24/2024",
+        "Persona a cargo": "Sibyl Kitney"
+    },
+    {
+        "id": 231,
+        "Categoria": "BLU",
+        "Nombre": "BLU Dash L3",
+        "Fecha de actualizacion": "1/12/2024",
+        "Persona a cargo": "Thorndike Marcq"
+    },
+    {
+        "id": 232,
+        "Categoria": "XOLO",
+        "Nombre": "XOLO Era 2",
+        "Fecha de actualizacion": "4/22/2024",
+        "Persona a cargo": "Adria Sabey"
+    },
+    {
+        "id": 233,
+        "Categoria": "Yezz",
+        "Nombre": "Yezz Clasico YZ300",
+        "Fecha de actualizacion": "9/13/2024",
+        "Persona a cargo": "Alma O'Logan"
+    },
+    {
+        "id": 234,
+        "Categoria": "VK",
+        "Nombre": "VK Mobile VK500",
+        "Fecha de actualizacion": "10/4/2024",
+        "Persona a cargo": "Vivie Satteford"
+    },
+    {
+        "id": 235,
+        "Categoria": "Meizu",
+        "Nombre": "Meizu M2 Note",
+        "Fecha de actualizacion": "10/17/2024",
+        "Persona a cargo": "Jacynth Werny"
+    },
+    {
+        "id": 236,
+        "Categoria": "Tecno",
+        "Nombre": "Tecno Pouvoir 4",
+        "Fecha de actualizacion": "6/14/2024",
+        "Persona a cargo": "Andeee Pollett"
+    },
+    {
+        "id": 237,
+        "Categoria": "Maxwest",
+        "Nombre": "Maxwest Nitro Phablet 71",
+        "Fecha de actualizacion": "12/28/2024",
+        "Persona a cargo": "Ronda Meneo"
+    },
+    {
+        "id": 238,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia N79",
+        "Fecha de actualizacion": "6/29/2024",
+        "Persona a cargo": "Odilia Ellinor"
+    },
+    {
+        "id": 239,
+        "Categoria": "BLU",
+        "Nombre": "BLU Touchbook M7 Pro",
+        "Fecha de actualizacion": "5/28/2024",
+        "Persona a cargo": "Maurits Napthine"
+    },
+    {
+        "id": 240,
+        "Categoria": "Gigabyte",
+        "Nombre": "Gigabyte GSmart GX2",
+        "Fecha de actualizacion": "9/7/2024",
+        "Persona a cargo": "Minta Chapelhow"
+    },
+    {
+        "id": 241,
+        "Categoria": "Toshiba",
+        "Nombre": "Toshiba Thrive",
+        "Fecha de actualizacion": "4/25/2024",
+        "Persona a cargo": "Abramo Gauvin"
+    },
+    {
+        "id": 242,
+        "Categoria": "LG",
+        "Nombre": "LG U8110",
+        "Fecha de actualizacion": "7/1/2024",
+        "Persona a cargo": "Melvin Paulillo"
+    },
+    {
+        "id": 243,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola W388",
+        "Fecha de actualizacion": "12/27/2024",
+        "Persona a cargo": "Laurice MacAlpin"
+    },
+    {
+        "id": 244,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Reef",
+        "Fecha de actualizacion": "6/3/2024",
+        "Persona a cargo": "Carmella Matusov"
+    },
+    {
+        "id": 245,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung N105",
+        "Fecha de actualizacion": "8/3/2024",
+        "Persona a cargo": "Sarette Tripony"
+    },
+    {
+        "id": 246,
+        "Categoria": "vivo",
+        "Nombre": "vivo X50",
+        "Fecha de actualizacion": "12/21/2024",
+        "Persona a cargo": "Judith Haylands"
+    },
+    {
+        "id": 247,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Z330",
+        "Fecha de actualizacion": "8/8/2024",
+        "Persona a cargo": "Marco Peace"
+    },
+    {
+        "id": 248,
+        "Categoria": "Siemens",
+        "Nombre": "Siemens U10",
+        "Fecha de actualizacion": "7/17/2024",
+        "Persona a cargo": "Julieta Matthias"
+    },
+    {
+        "id": 249,
+        "Categoria": "Haier",
+        "Nombre": "Haier V190",
+        "Fecha de actualizacion": "1/11/2024",
+        "Persona a cargo": "Oren Lodovichi"
+    },
+    {
+        "id": 250,
+        "Categoria": "Archos",
+        "Nombre": "Archos 45c Platinum",
+        "Fecha de actualizacion": "3/24/2024",
+        "Persona a cargo": "Simmonds Simonnot"
+    },
+    {
+        "id": 251,
+        "Categoria": "HTC",
+        "Nombre": "HTC Butterfly 3",
+        "Fecha de actualizacion": "7/22/2024",
+        "Persona a cargo": "Starlin Egdal"
+    },
+    {
+        "id": 252,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola WX290",
+        "Fecha de actualizacion": "3/11/2024",
+        "Persona a cargo": "Christabel Southcott"
+    },
+    {
+        "id": 253,
+        "Categoria": "BlackBerry",
+        "Nombre": "BlackBerry 4G LTE Playbook",
+        "Fecha de actualizacion": "4/11/2024",
+        "Persona a cargo": "Nickola Bunyan"
+    },
+    {
+        "id": 254,
+        "Categoria": "Honor",
+        "Nombre": "Honor 7i",
+        "Fecha de actualizacion": "2/3/2024",
+        "Persona a cargo": "Oliver Node"
+    },
+    {
+        "id": 255,
+        "Categoria": "Prestigio",
+        "Nombre": "Prestigio MultiPad 2 Prime Duo 8.0",
+        "Fecha de actualizacion": "7/9/2024",
+        "Persona a cargo": "Jeddy MacMorland"
+    },
+    {
+        "id": 256,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung i300",
+        "Fecha de actualizacion": "4/28/2024",
+        "Persona a cargo": "Milton Forte"
+    },
+    {
+        "id": 257,
+        "Categoria": "Panasonic",
+        "Nombre": "Panasonic G51",
+        "Fecha de actualizacion": "4/16/2024",
+        "Persona a cargo": "Nataline Bladge"
+    },
+    {
+        "id": 258,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung M190S Galaxy S Hoppin",
+        "Fecha de actualizacion": "2/17/2024",
+        "Persona a cargo": "Peterus Costin"
+    },
+    {
+        "id": 259,
+        "Categoria": "HTC",
+        "Nombre": "HTC U11+",
+        "Fecha de actualizacion": "8/5/2024",
+        "Persona a cargo": "Alexandr Jervis"
+    },
+    {
+        "id": 260,
+        "Categoria": "Honor",
+        "Nombre": "Honor 6X",
+        "Fecha de actualizacion": "7/23/2024",
+        "Persona a cargo": "Milly Klaassens"
+    },
+    {
+        "id": 261,
+        "Categoria": "Innostream",
+        "Nombre": "Innostream INNO 36",
+        "Fecha de actualizacion": "10/18/2024",
+        "Persona a cargo": "Chandra Exall"
+    },
+    {
+        "id": 262,
+        "Categoria": "LG",
+        "Nombre": "LG X350",
+        "Fecha de actualizacion": "5/25/2024",
+        "Persona a cargo": "Kathryne Blain"
+    },
+    {
+        "id": 263,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Pop D1",
+        "Fecha de actualizacion": "4/20/2024",
+        "Persona a cargo": "Antin Scheffler"
+    },
+    {
+        "id": 264,
+        "Categoria": "Infinix",
+        "Nombre": "Infinix Hot 9",
+        "Fecha de actualizacion": "9/1/2024",
+        "Persona a cargo": "Bobby McKevitt"
+    },
+    {
+        "id": 265,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6103",
+        "Fecha de actualizacion": "5/17/2024",
+        "Persona a cargo": "Brittan Dahlbom"
+    },
+    {
+        "id": 266,
+        "Categoria": "BLU",
+        "Nombre": "BLU Studio Pro",
+        "Fecha de actualizacion": "11/4/2024",
+        "Persona a cargo": "Jackqueline Doughartie"
+    },
+    {
+        "id": 267,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Pop 2 (5)",
+        "Fecha de actualizacion": "1/12/2024",
+        "Persona a cargo": "Vassili Thoresbie"
+    },
+    {
+        "id": 268,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung A867 Eternity",
+        "Fecha de actualizacion": "10/5/2024",
+        "Persona a cargo": "Marlowe Harding"
+    },
+    {
+        "id": 269,
+        "Categoria": "Wiko",
+        "Nombre": "Wiko Jimmy",
+        "Fecha de actualizacion": "2/25/2024",
+        "Persona a cargo": "Tracey Cockroft"
+    },
+    {
+        "id": 270,
+        "Categoria": "HTC",
+        "Nombre": "HTC Tilt2",
+        "Fecha de actualizacion": "9/26/2024",
+        "Persona a cargo": "Jephthah Muffen"
+    },
+    {
+        "id": 271,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung T139",
+        "Fecha de actualizacion": "12/29/2024",
+        "Persona a cargo": "Michaeline Francie"
+    },
+    {
+        "id": 272,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C770N",
+        "Fecha de actualizacion": "5/26/2024",
+        "Persona a cargo": "Nicolette Pimlett"
+    },
+    {
+        "id": 273,
+        "Categoria": "LG",
+        "Nombre": "LG Optimus Pad V900",
+        "Fecha de actualizacion": "3/29/2024",
+        "Persona a cargo": "Perl Bonhomme"
+    },
+    {
+        "id": 274,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Mi Mix 2S",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Cherianne Beasleigh"
+    },
+    {
+        "id": 275,
+        "Categoria": "HP",
+        "Nombre": "HP Slate10 HD",
+        "Fecha de actualizacion": "1/18/2024",
+        "Persona a cargo": "Tymothy Maestrini"
+    },
+    {
+        "id": 276,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Ninja A54",
+        "Fecha de actualizacion": "7/29/2024",
+        "Persona a cargo": "Michel Hague"
+    },
+    {
+        "id": 277,
+        "Categoria": "LG",
+        "Nombre": "LG T370 Cookie Smart",
+        "Fecha de actualizacion": "2/4/2024",
+        "Persona a cargo": "Howard Moffatt"
+    },
+    {
+        "id": 278,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE F951",
+        "Fecha de actualizacion": "5/15/2024",
+        "Persona a cargo": "Glennie Maker"
+    },
+    {
+        "id": 279,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6101",
+        "Fecha de actualizacion": "12/19/2024",
+        "Persona a cargo": "Malia Cottu"
+    },
+    {
+        "id": 280,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo A92s",
+        "Fecha de actualizacion": "3/27/2024",
+        "Persona a cargo": "Sheba Temperley"
+    },
+    {
+        "id": 281,
+        "Categoria": "Maxon",
+        "Nombre": "Maxon MX-6814",
+        "Fecha de actualizacion": "1/23/2024",
+        "Persona a cargo": "Rutherford Halworth"
+    },
+    {
+        "id": 282,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia Lumia 900 AT&T",
+        "Fecha de actualizacion": "4/14/2024",
+        "Persona a cargo": "Livvie Pawelski"
+    },
+    {
+        "id": 283,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee K6",
+        "Fecha de actualizacion": "6/7/2024",
+        "Persona a cargo": "Leroi Persicke"
+    },
+    {
+        "id": 284,
+        "Categoria": "Plum",
+        "Nombre": "Plum Might Pro",
+        "Fecha de actualizacion": "5/26/2024",
+        "Persona a cargo": "Kaile Tinklin"
+    },
+    {
+        "id": 285,
+        "Categoria": "verykool",
+        "Nombre": "verykool s4510 Luna",
+        "Fecha de actualizacion": "9/2/2024",
+        "Persona a cargo": "Bronnie Lidyard"
+    },
+    {
+        "id": 286,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia C7",
+        "Fecha de actualizacion": "5/2/2024",
+        "Persona a cargo": "Edgar Rosell"
+    },
+    {
+        "id": 287,
+        "Categoria": "Acer",
+        "Nombre": "Acer Liquid C1",
+        "Fecha de actualizacion": "5/26/2024",
+        "Persona a cargo": "Pegeen O'Hannen"
+    },
+    {
+        "id": 288,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Mate 30 Lite",
+        "Fecha de actualizacion": "6/15/2024",
+        "Persona a cargo": "Gregor McGrudder"
+    },
+    {
+        "id": 289,
+        "Categoria": "BlackBerry",
+        "Nombre": "BlackBerry Torch 9860",
+        "Fecha de actualizacion": "3/31/2024",
+        "Persona a cargo": "Poul Loddon"
+    },
+    {
+        "id": 290,
+        "Categoria": "Microsoft",
+        "Nombre": "Microsoft Surface Duo",
+        "Fecha de actualizacion": "9/1/2024",
+        "Persona a cargo": "Amerigo Roostan"
+    },
+    {
+        "id": 291,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-I650 SPORT",
+        "Fecha de actualizacion": "3/15/2024",
+        "Persona a cargo": "Louise Strewthers"
+    },
+    {
+        "id": 292,
+        "Categoria": "Ulefone",
+        "Nombre": "Ulefone Armor X3",
+        "Fecha de actualizacion": "12/23/2024",
+        "Persona a cargo": "Arley Canacott"
+    },
+    {
+        "id": 293,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung E780",
+        "Fecha de actualizacion": "4/19/2024",
+        "Persona a cargo": "Felita Lambarton"
+    },
+    {
+        "id": 294,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Redmi 4 (4X)",
+        "Fecha de actualizacion": "9/20/2024",
+        "Persona a cargo": "Alysia Cianni"
+    },
+    {
+        "id": 295,
+        "Categoria": "O2",
+        "Nombre": "O2 X2",
+        "Fecha de actualizacion": "9/29/2024",
+        "Persona a cargo": "Babbette Cuffe"
+    },
+    {
+        "id": 296,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Pocket Neo S5310",
+        "Fecha de actualizacion": "10/30/2024",
+        "Persona a cargo": "Joya Charlwood"
+    },
+    {
+        "id": 297,
+        "Categoria": "Coolpad",
+        "Nombre": "Coolpad Note 5",
+        "Fecha de actualizacion": "8/20/2024",
+        "Persona a cargo": "Darcie Getcliffe"
+    },
+    {
+        "id": 298,
+        "Categoria": "verykool",
+        "Nombre": "verykool s5015 Spark II",
+        "Fecha de actualizacion": "7/1/2024",
+        "Persona a cargo": "Siffre Hopkins"
+    },
+    {
+        "id": 299,
+        "Categoria": "HTC",
+        "Nombre": "HTC MTeoR",
+        "Fecha de actualizacion": "9/22/2024",
+        "Persona a cargo": "Fancy Philp"
+    },
+    {
+        "id": 300,
+        "Categoria": "Archos",
+        "Nombre": "Archos 50b Platinum",
+        "Fecha de actualizacion": "10/29/2024",
+        "Persona a cargo": "Delbert Gillmor"
+    },
+    {
+        "id": 301,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-992D",
+        "Fecha de actualizacion": "1/31/2024",
+        "Persona a cargo": "Lethia Rivaland"
+    },
+    {
+        "id": 302,
+        "Categoria": "Philips",
+        "Nombre": "Philips S880",
+        "Fecha de actualizacion": "6/18/2024",
+        "Persona a cargo": "Evered Francescuzzi"
+    },
+    {
+        "id": 303,
+        "Categoria": "Allview",
+        "Nombre": "Allview X2 Soul Mini",
+        "Fecha de actualizacion": "1/19/2024",
+        "Persona a cargo": "Paule Hindge"
+    },
+    {
+        "id": 304,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola V635",
+        "Fecha de actualizacion": "10/24/2024",
+        "Persona a cargo": "Gene Welberry"
+    },
+    {
+        "id": 305,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 8800 Arte",
+        "Fecha de actualizacion": "9/11/2024",
+        "Persona a cargo": "Josey Coucher"
+    },
+    {
+        "id": 306,
+        "Categoria": "Siemens",
+        "Nombre": "Siemens CF62",
+        "Fecha de actualizacion": "11/30/2024",
+        "Persona a cargo": "Kimmy Marchent"
+    },
+    {
+        "id": 307,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola A1260",
+        "Fecha de actualizacion": "7/21/2024",
+        "Persona a cargo": "Noell Robus"
+    },
+    {
+        "id": 308,
+        "Categoria": "HTC",
+        "Nombre": "HTC Desire SV",
+        "Fecha de actualizacion": "1/18/2024",
+        "Persona a cargo": "Abel Hyder"
+    },
+    {
+        "id": 309,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6111",
+        "Fecha de actualizacion": "12/22/2024",
+        "Persona a cargo": "Flossi Upcott"
+    },
+    {
+        "id": 310,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Y8p",
+        "Fecha de actualizacion": "8/14/2024",
+        "Persona a cargo": "Germana Moar"
+    },
+    {
+        "id": 311,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Light Tab 2 V9A",
+        "Fecha de actualizacion": "7/6/2024",
+        "Persona a cargo": "Liesa Mash"
+    },
+    {
+        "id": 312,
+        "Categoria": "LG",
+        "Nombre": "LG G2 Lite",
+        "Fecha de actualizacion": "12/21/2024",
+        "Persona a cargo": "Pavia Geeson"
+    },
+    {
+        "id": 313,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Fusion U8652",
+        "Fecha de actualizacion": "2/16/2024",
+        "Persona a cargo": "Jade Dumberrill"
+    },
+    {
+        "id": 314,
+        "Categoria": "Haier",
+        "Nombre": "Haier G7",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Nathanil Seale"
+    },
+    {
+        "id": 315,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola EX119",
+        "Fecha de actualizacion": "4/8/2024",
+        "Persona a cargo": "Gina Ferie"
+    },
+    {
+        "id": 316,
+        "Categoria": "vivo",
+        "Nombre": "vivo X9 Plus",
+        "Fecha de actualizacion": "7/10/2024",
+        "Persona a cargo": "Maurizia O'Heyne"
+    },
+    {
+        "id": 317,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Idol 3 (5.5)",
+        "Fecha de actualizacion": "7/30/2024",
+        "Persona a cargo": "Munmro Walsh"
+    },
+    {
+        "id": 318,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung P920",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Isaac Tinston"
+    },
+    {
+        "id": 319,
+        "Categoria": "NEC",
+        "Nombre": "NEC DB500",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Sanford Basill"
+    },
+    {
+        "id": 320,
+        "Categoria": "Ericsson",
+        "Nombre": "Ericsson R600",
+        "Fecha de actualizacion": "9/29/2024",
+        "Persona a cargo": "Simona Ayrton"
+    },
+    {
+        "id": 321,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPad Air",
+        "Fecha de actualizacion": "12/29/2024",
+        "Persona a cargo": "Julio Shoard"
+    },
+    {
+        "id": 322,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Redmi Note Prime",
+        "Fecha de actualizacion": "3/23/2024",
+        "Persona a cargo": "Aura Mathivat"
+    },
+    {
+        "id": 323,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei G6608",
+        "Fecha de actualizacion": "8/10/2024",
+        "Persona a cargo": "Alvera Rantoull"
+    },
+    {
+        "id": 324,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Mi 9 Pro 5G",
+        "Fecha de actualizacion": "10/1/2024",
+        "Persona a cargo": "Donalt Purcer"
+    },
+    {
+        "id": 325,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Y5 (2019)",
+        "Fecha de actualizacion": "3/15/2024",
+        "Persona a cargo": "Fionna Van der Hoeven"
+    },
+    {
+        "id": 326,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola MILESTONE 3 XT860",
+        "Fecha de actualizacion": "10/8/2024",
+        "Persona a cargo": "Carina Ast"
+    },
+    {
+        "id": 327,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola P30",
+        "Fecha de actualizacion": "2/6/2024",
+        "Persona a cargo": "Maisie Giller"
+    },
+    {
+        "id": 328,
+        "Categoria": "OnePlus",
+        "Nombre": "OnePlus 3",
+        "Fecha de actualizacion": "3/11/2024",
+        "Persona a cargo": "Hayes Sheppard"
+    },
+    {
+        "id": 329,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE X760",
+        "Fecha de actualizacion": "5/27/2024",
+        "Persona a cargo": "Natty Ferrulli"
+    },
+    {
+        "id": 330,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon Q3K Power",
+        "Fecha de actualizacion": "2/7/2024",
+        "Persona a cargo": "Drake Ximenez"
+    },
+    {
+        "id": 331,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem MY X2-2",
+        "Fecha de actualizacion": "10/19/2024",
+        "Persona a cargo": "Dalis Endacott"
+    },
+    {
+        "id": 332,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Watch GT 2 Porsche Design",
+        "Fecha de actualizacion": "2/18/2024",
+        "Persona a cargo": "Mada Fawcitt"
+    },
+    {
+        "id": 333,
+        "Categoria": "Asus",
+        "Nombre": "Asus P735",
+        "Fecha de actualizacion": "3/22/2024",
+        "Persona a cargo": "Niko Feldmark"
+    },
+    {
+        "id": 334,
+        "Categoria": "Plum",
+        "Nombre": "Plum Compass",
+        "Fecha de actualizacion": "1/24/2024",
+        "Persona a cargo": "Loretta Klulisek"
+    },
+    {
+        "id": 335,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee S6 Pro",
+        "Fecha de actualizacion": "6/20/2024",
+        "Persona a cargo": "Jacqui Molloy"
+    },
+    {
+        "id": 336,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola MILESTONE XT720",
+        "Fecha de actualizacion": "8/18/2024",
+        "Persona a cargo": "Leena Bernlin"
+    },
+    {
+        "id": 337,
+        "Categoria": "Acer",
+        "Nombre": "Acer Liquid Z4",
+        "Fecha de actualizacion": "1/19/2024",
+        "Persona a cargo": "Matti Hatley"
+    },
+    {
+        "id": 338,
+        "Categoria": "Allview",
+        "Nombre": "Allview P6 Energy",
+        "Fecha de actualizacion": "4/23/2024",
+        "Persona a cargo": "Javier Crockley"
+    },
+    {
+        "id": 339,
+        "Categoria": "NIU",
+        "Nombre": "NIU Tek 4D2",
+        "Fecha de actualizacion": "3/30/2024",
+        "Persona a cargo": "Durante Walkowski"
+    },
+    {
+        "id": 340,
+        "Categoria": "Microsoft",
+        "Nombre": "Microsoft Kin One",
+        "Fecha de actualizacion": "9/16/2024",
+        "Persona a cargo": "Hendrika Beament"
+    },
+    {
+        "id": 341,
+        "Categoria": "Realme",
+        "Nombre": "Realme X9",
+        "Fecha de actualizacion": "8/29/2024",
+        "Persona a cargo": "Zonda Crier"
+    },
+    {
+        "id": 342,
+        "Categoria": "Spice",
+        "Nombre": "Spice Stellar 526 (Mi-526)",
+        "Fecha de actualizacion": "8/15/2024",
+        "Persona a cargo": "Audre Kingman"
+    },
+    {
+        "id": 343,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax X288",
+        "Fecha de actualizacion": "4/17/2024",
+        "Persona a cargo": "Traver Rysdale"
+    },
+    {
+        "id": 344,
+        "Categoria": "Energizer",
+        "Nombre": "Energizer Hardcase H500S",
+        "Fecha de actualizacion": "1/28/2024",
+        "Persona a cargo": "Bendicty Beardon"
+    },
+    {
+        "id": 345,
+        "Categoria": "Sharp",
+        "Nombre": "Sharp 550SH",
+        "Fecha de actualizacion": "1/6/2025",
+        "Persona a cargo": "Abagael Murrum"
+    },
+    {
+        "id": 346,
+        "Categoria": "VK",
+        "Nombre": "VK Mobile VK800",
+        "Fecha de actualizacion": "3/8/2024",
+        "Persona a cargo": "Wilbur Banke"
+    },
+    {
+        "id": 347,
+        "Categoria": "Acer",
+        "Nombre": "Acer Iconia Tab A100",
+        "Fecha de actualizacion": "2/12/2024",
+        "Persona a cargo": "Delbert Goare"
+    },
+    {
+        "id": 348,
+        "Categoria": "Bird",
+        "Nombre": "Bird A120",
+        "Fecha de actualizacion": "6/11/2024",
+        "Persona a cargo": "Kiah Maudsley"
+    },
+    {
+        "id": 349,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung C5510",
+        "Fecha de actualizacion": "6/2/2024",
+        "Persona a cargo": "Nobie Pittle"
+    },
+    {
+        "id": 350,
+        "Categoria": "LG",
+        "Nombre": "LG G Pad III 10.1 FHD",
+        "Fecha de actualizacion": "12/20/2024",
+        "Persona a cargo": "Ninnette Shard"
+    },
+    {
+        "id": 351,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson F305",
+        "Fecha de actualizacion": "7/31/2024",
+        "Persona a cargo": "Goldie Loche"
+    },
+    {
+        "id": 352,
+        "Categoria": "HTC",
+        "Nombre": "HTC Rezound",
+        "Fecha de actualizacion": "5/8/2024",
+        "Persona a cargo": "Gilberto Roggeman"
+    },
+    {
+        "id": 353,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Bolt Q331",
+        "Fecha de actualizacion": "10/5/2024",
+        "Persona a cargo": "Wilone Seabright"
+    },
+    {
+        "id": 354,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C404",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Brandyn Grimwade"
+    },
+    {
+        "id": 355,
+        "Categoria": "Microsoft",
+        "Nombre": "Microsoft Lumia 950 XL Dual SIM",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Wilhelmina Lopes"
+    },
+    {
+        "id": 356,
+        "Categoria": "QMobile",
+        "Nombre": "QMobile Linq X70",
+        "Fecha de actualizacion": "11/10/2024",
+        "Persona a cargo": "Amil Verbruggen"
+    },
+    {
+        "id": 357,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee P7",
+        "Fecha de actualizacion": "8/14/2024",
+        "Persona a cargo": "Sherlocke Birtchnell"
+    },
+    {
+        "id": 358,
+        "Categoria": "HP",
+        "Nombre": "HP iPAQ Data Messenger",
+        "Fecha de actualizacion": "1/29/2024",
+        "Persona a cargo": "Demetre Borborough"
+    },
+    {
+        "id": 359,
+        "Categoria": "Orange",
+        "Nombre": "Orange Dallas",
+        "Fecha de actualizacion": "9/23/2024",
+        "Persona a cargo": "Carly Jane"
+    },
+    {
+        "id": 360,
+        "Categoria": "Emporia",
+        "Nombre": "Emporia Click Plus",
+        "Fecha de actualizacion": "12/8/2024",
+        "Persona a cargo": "Douglass Errigo"
+    },
+    {
+        "id": 361,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 100",
+        "Fecha de actualizacion": "6/27/2024",
+        "Persona a cargo": "Joli Sandercroft"
+    },
+    {
+        "id": 362,
+        "Categoria": "Sewon",
+        "Nombre": "Sewon SG-1000",
+        "Fecha de actualizacion": "10/21/2024",
+        "Persona a cargo": "Kristen Divver"
+    },
+    {
+        "id": 363,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei U8650 Sonic",
+        "Fecha de actualizacion": "2/19/2024",
+        "Persona a cargo": "Binny Cathesyed"
+    },
+    {
+        "id": 364,
+        "Categoria": "Kyocera",
+        "Nombre": "Kyocera E4600",
+        "Fecha de actualizacion": "5/15/2024",
+        "Persona a cargo": "Binnie Cruden"
+    },
+    {
+        "id": 365,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei nova plus",
+        "Fecha de actualizacion": "2/28/2024",
+        "Persona a cargo": "Eleonore McMillan"
+    },
+    {
+        "id": 366,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola M3588",
+        "Fecha de actualizacion": "11/16/2024",
+        "Persona a cargo": "Oralie Rawles"
+    },
+    {
+        "id": 367,
+        "Categoria": "Asus",
+        "Nombre": "Asus Zenfone 5z ZS620KL",
+        "Fecha de actualizacion": "12/13/2024",
+        "Persona a cargo": "Giffer Blaase"
+    },
+    {
+        "id": 368,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola Moto E3 Power",
+        "Fecha de actualizacion": "9/19/2024",
+        "Persona a cargo": "Tobie Grain"
+    },
+    {
+        "id": 369,
+        "Categoria": "LG",
+        "Nombre": "LG G5500",
+        "Fecha de actualizacion": "3/16/2024",
+        "Persona a cargo": "Abey Townes"
+    },
+    {
+        "id": 370,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy Note8",
+        "Fecha de actualizacion": "5/20/2024",
+        "Persona a cargo": "Gar McGrale"
+    },
+    {
+        "id": 371,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem MY V-75",
+        "Fecha de actualizacion": "2/16/2024",
+        "Persona a cargo": "Anthea Hampstead"
+    },
+    {
+        "id": 372,
+        "Categoria": "Maxon",
+        "Nombre": "Maxon MX-6879",
+        "Fecha de actualizacion": "11/22/2024",
+        "Persona a cargo": "Emmie Seabon"
+    },
+    {
+        "id": 373,
+        "Categoria": "Maxwest",
+        "Nombre": "Maxwest Blade",
+        "Fecha de actualizacion": "12/29/2024",
+        "Persona a cargo": "Yulma Whaplington"
+    },
+    {
+        "id": 374,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola E375",
+        "Fecha de actualizacion": "10/12/2024",
+        "Persona a cargo": "Ian Giaomozzo"
+    },
+    {
+        "id": 375,
+        "Categoria": "QMobile",
+        "Nombre": "QMobile Noir X700",
+        "Fecha de actualizacion": "7/10/2024",
+        "Persona a cargo": "Sherye Anwyl"
+    },
+    {
+        "id": 376,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung T929 Memoir",
+        "Fecha de actualizacion": "12/13/2024",
+        "Persona a cargo": "Renato Puddephatt"
+    },
+    {
+        "id": 377,
+        "Categoria": "verykool",
+        "Nombre": "verykool SL5560 Maverick Pro",
+        "Fecha de actualizacion": "4/15/2024",
+        "Persona a cargo": "Milissent Cianelli"
+    },
+    {
+        "id": 378,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Bolt Q381",
+        "Fecha de actualizacion": "11/2/2024",
+        "Persona a cargo": "Consuela Schmuhl"
+    },
+    {
+        "id": 379,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia E7",
+        "Fecha de actualizacion": "6/25/2024",
+        "Persona a cargo": "Ashley Spoerl"
+    },
+    {
+        "id": 380,
+        "Categoria": "LG",
+        "Nombre": "LG T5100",
+        "Fecha de actualizacion": "11/23/2024",
+        "Persona a cargo": "Algernon Skamal"
+    },
+    {
+        "id": 381,
+        "Categoria": "Allview",
+        "Nombre": "Allview P8 Energy Pro",
+        "Fecha de actualizacion": "5/10/2024",
+        "Persona a cargo": "Bret Foulks"
+    },
+    {
+        "id": 382,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee S11S",
+        "Fecha de actualizacion": "3/12/2024",
+        "Persona a cargo": "Clo Gruszka"
+    },
+    {
+        "id": 383,
+        "Categoria": "Siemens",
+        "Nombre": "Siemens C62",
+        "Fecha de actualizacion": "7/19/2024",
+        "Persona a cargo": "Elias Greenstock"
+    },
+    {
+        "id": 384,
+        "Categoria": "Maxwest",
+        "Nombre": "Maxwest Virtue Z5",
+        "Fecha de actualizacion": "11/22/2024",
+        "Persona a cargo": "Obediah Persicke"
+    },
+    {
+        "id": 385,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Trender",
+        "Fecha de actualizacion": "1/2/2025",
+        "Persona a cargo": "Karolina Allmann"
+    },
+    {
+        "id": 386,
+        "Categoria": "NEC",
+        "Nombre": "NEC e808y",
+        "Fecha de actualizacion": "9/20/2024",
+        "Persona a cargo": "Woodman Marshall"
+    },
+    {
+        "id": 387,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel 3T 10",
+        "Fecha de actualizacion": "12/7/2024",
+        "Persona a cargo": "Kizzie Charter"
+    },
+    {
+        "id": 388,
+        "Categoria": "Plum",
+        "Nombre": "Plum Flipper 2",
+        "Fecha de actualizacion": "9/1/2024",
+        "Persona a cargo": "Jessee Glandon"
+    },
+    {
+        "id": 389,
+        "Categoria": "Allview",
+        "Nombre": "Allview P8 Energy Pro",
+        "Fecha de actualizacion": "8/17/2024",
+        "Persona a cargo": "Gwendolin Korb"
+    },
+    {
+        "id": 390,
+        "Categoria": "YU",
+        "Nombre": "YU Yureka Plus",
+        "Fecha de actualizacion": "1/12/2024",
+        "Persona a cargo": "Thorpe Trowsdale"
+    },
+    {
+        "id": 391,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Funbook 3G P600",
+        "Fecha de actualizacion": "11/28/2024",
+        "Persona a cargo": "Derk Mattersley"
+    },
+    {
+        "id": 392,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPad Air (2019)",
+        "Fecha de actualizacion": "2/26/2024",
+        "Persona a cargo": "Giles Marchi"
+    },
+    {
+        "id": 393,
+        "Categoria": "T-Mobile",
+        "Nombre": "T-Mobile Move Balance",
+        "Fecha de actualizacion": "1/6/2025",
+        "Persona a cargo": "Maurita Pregel"
+    },
+    {
+        "id": 394,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung R260 Chrono",
+        "Fecha de actualizacion": "5/13/2024",
+        "Persona a cargo": "Alyosha Truscott"
+    },
+    {
+        "id": 395,
+        "Categoria": "Haier",
+        "Nombre": "Haier U69",
+        "Fecha de actualizacion": "8/24/2024",
+        "Persona a cargo": "Camey Buckerfield"
+    },
+    {
+        "id": 396,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung S7710 Galaxy Xcover 2",
+        "Fecha de actualizacion": "1/17/2024",
+        "Persona a cargo": "Eliza Keinrat"
+    },
+    {
+        "id": 397,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Redmi 9 Power",
+        "Fecha de actualizacion": "3/16/2024",
+        "Persona a cargo": "Arielle Meah"
+    },
+    {
+        "id": 398,
+        "Categoria": "XOLO",
+        "Nombre": "XOLO Q700",
+        "Fecha de actualizacion": "6/14/2024",
+        "Persona a cargo": "Giorgia Grayne"
+    },
+    {
+        "id": 399,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson Z800",
+        "Fecha de actualizacion": "10/15/2024",
+        "Persona a cargo": "Kahaleel Blanking"
+    },
+    {
+        "id": 400,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Y3 (2018)",
+        "Fecha de actualizacion": "4/17/2024",
+        "Persona a cargo": "Oralie Rizziello"
+    },
+    {
+        "id": 401,
+        "Categoria": "Haier",
+        "Nombre": "Haier V2000",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Hieronymus Geck"
+    },
+    {
+        "id": 402,
+        "Categoria": "Philips",
+        "Nombre": "Philips Xenium 9@9i",
+        "Fecha de actualizacion": "4/16/2024",
+        "Persona a cargo": "Napoleon Avard"
+    },
+    {
+        "id": 403,
+        "Categoria": "Allview",
+        "Nombre": "Allview X4 Soul",
+        "Fecha de actualizacion": "7/15/2024",
+        "Persona a cargo": "Reggis Beldam"
+    },
+    {
+        "id": 404,
+        "Categoria": "Acer",
+        "Nombre": "Acer Liquid Zest Plus",
+        "Fecha de actualizacion": "6/13/2024",
+        "Persona a cargo": "Morgan Nursey"
+    },
+    {
+        "id": 405,
+        "Categoria": "LG",
+        "Nombre": "LG KM386",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Leigh Toffanelli"
+    },
+    {
+        "id": 406,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo K7x",
+        "Fecha de actualizacion": "3/31/2024",
+        "Persona a cargo": "Timmie Andrzejowski"
+    },
+    {
+        "id": 407,
+        "Categoria": "Unnecto",
+        "Nombre": "Unnecto Air 5.0",
+        "Fecha de actualizacion": "12/20/2024",
+        "Persona a cargo": "Libby Quarless"
+    },
+    {
+        "id": 408,
+        "Categoria": "Icemobile",
+        "Nombre": "Icemobile Rainbow",
+        "Fecha de actualizacion": "3/28/2024",
+        "Persona a cargo": "Avivah Van Der Vlies"
+    },
+    {
+        "id": 409,
+        "Categoria": "LG",
+        "Nombre": "LG Rumor Reflex  LN272",
+        "Fecha de actualizacion": "9/13/2024",
+        "Persona a cargo": "Jennie Burditt"
+    },
+    {
+        "id": 410,
+        "Categoria": "Gigabyte",
+        "Nombre": "Gigabyte GSmart Maya M1",
+        "Fecha de actualizacion": "5/13/2024",
+        "Persona a cargo": "Kore Bernasek"
+    },
+    {
+        "id": 411,
+        "Categoria": "Wiko",
+        "Nombre": "Wiko Fever 4G",
+        "Fecha de actualizacion": "9/1/2024",
+        "Persona a cargo": "Quintina Snoxall"
+    },
+    {
+        "id": 412,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone 360 H1",
+        "Fecha de actualizacion": "2/7/2024",
+        "Persona a cargo": "Say Mordey"
+    },
+    {
+        "id": 413,
+        "Categoria": "Wiko",
+        "Nombre": "Wiko Highway Pure 4G",
+        "Fecha de actualizacion": "9/13/2024",
+        "Persona a cargo": "Marilyn Exrol"
+    },
+    {
+        "id": 414,
+        "Categoria": "Sony",
+        "Nombre": "Sony Xperia Z4 Tablet WiFi",
+        "Fecha de actualizacion": "4/22/2024",
+        "Persona a cargo": "Emmeline Bowdler"
+    },
+    {
+        "id": 415,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson T700",
+        "Fecha de actualizacion": "10/25/2024",
+        "Persona a cargo": "Heindrick McCrainor"
+    },
+    {
+        "id": 416,
+        "Categoria": "Oppo",
+        "Nombre": "Oppo Reno2",
+        "Fecha de actualizacion": "1/12/2024",
+        "Persona a cargo": "Tallie Corain"
+    },
+    {
+        "id": 417,
+        "Categoria": "Qtek",
+        "Nombre": "Qtek 2020i",
+        "Fecha de actualizacion": "11/30/2024",
+        "Persona a cargo": "Flory Scraggs"
+    },
+    {
+        "id": 418,
+        "Categoria": "Ericsson",
+        "Nombre": "Ericsson T66",
+        "Fecha de actualizacion": "1/13/2024",
+        "Persona a cargo": "Ralf Doole"
+    },
+    {
+        "id": 419,
+        "Categoria": "XOLO",
+        "Nombre": "XOLO Q2000",
+        "Fecha de actualizacion": "5/4/2024",
+        "Persona a cargo": "Felic Jachimak"
+    },
+    {
+        "id": 420,
+        "Categoria": "Prestigio",
+        "Nombre": "Prestigio MultiPad 7.0 Ultra",
+        "Fecha de actualizacion": "8/4/2024",
+        "Persona a cargo": "Claybourne Weldrick"
+    },
+    {
+        "id": 421,
+        "Categoria": "Yezz",
+        "Nombre": "Yezz Andy A4",
+        "Fecha de actualizacion": "8/9/2024",
+        "Persona a cargo": "Dionysus Routledge"
+    },
+    {
+        "id": 422,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech GB200",
+        "Fecha de actualizacion": "9/6/2024",
+        "Persona a cargo": "Forbes Bidder"
+    },
+    {
+        "id": 423,
+        "Categoria": "Haier",
+        "Nombre": "Haier P5",
+        "Fecha de actualizacion": "10/28/2024",
+        "Persona a cargo": "Barnett Saintsbury"
+    },
+    {
+        "id": 424,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax A117 Canvas Magnus",
+        "Fecha de actualizacion": "8/3/2024",
+        "Persona a cargo": "Des MacNamara"
+    },
+    {
+        "id": 425,
+        "Categoria": "i-mate",
+        "Nombre": "i-mate JAQ",
+        "Fecha de actualizacion": "9/16/2024",
+        "Persona a cargo": "Dolly Glison"
+    },
+    {
+        "id": 426,
+        "Categoria": "T-Mobile",
+        "Nombre": "T-Mobile Vivacity",
+        "Fecha de actualizacion": "3/30/2024",
+        "Persona a cargo": "Nettie Greendale"
+    },
+    {
+        "id": 427,
+        "Categoria": "Realme",
+        "Nombre": "Realme 3",
+        "Fecha de actualizacion": "8/21/2024",
+        "Persona a cargo": "Dixie Ilchuk"
+    },
+    {
+        "id": 428,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6220 classic",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Cam Kaasman"
+    },
+    {
+        "id": 429,
+        "Categoria": "HTC",
+        "Nombre": "HTC Desire 626",
+        "Fecha de actualizacion": "12/12/2024",
+        "Persona a cargo": "Cathryn Scini"
+    },
+    {
+        "id": 430,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel Pop C1",
+        "Fecha de actualizacion": "10/27/2024",
+        "Persona a cargo": "Hamlin Sedge"
+    },
+    {
+        "id": 431,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone Smart 4 mini",
+        "Fecha de actualizacion": "10/30/2024",
+        "Persona a cargo": "Dyane Dulin"
+    },
+    {
+        "id": 432,
+        "Categoria": "Lava",
+        "Nombre": "Lava Z1",
+        "Fecha de actualizacion": "4/15/2024",
+        "Persona a cargo": "Euell Walkley"
+    },
+    {
+        "id": 433,
+        "Categoria": "vivo",
+        "Nombre": "vivo Y27",
+        "Fecha de actualizacion": "8/19/2024",
+        "Persona a cargo": "Dirk Paolicchi"
+    },
+    {
+        "id": 434,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung C160",
+        "Fecha de actualizacion": "2/21/2024",
+        "Persona a cargo": "Duff Yewen"
+    },
+    {
+        "id": 435,
+        "Categoria": "Gionee",
+        "Nombre": "Gionee M7",
+        "Fecha de actualizacion": "4/27/2024",
+        "Persona a cargo": "Costa McGarahan"
+    },
+    {
+        "id": 436,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech GB200",
+        "Fecha de actualizacion": "4/22/2024",
+        "Persona a cargo": "Obie Chancelier"
+    },
+    {
+        "id": 437,
+        "Categoria": "Asus",
+        "Nombre": "Asus V88i",
+        "Fecha de actualizacion": "7/27/2024",
+        "Persona a cargo": "Dolli Fransewich"
+    },
+    {
+        "id": 438,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Z110",
+        "Fecha de actualizacion": "5/2/2024",
+        "Persona a cargo": "Billi Seabert"
+    },
+    {
+        "id": 439,
+        "Categoria": "Modu",
+        "Nombre": "Modu Shiny jacket",
+        "Fecha de actualizacion": "10/23/2024",
+        "Persona a cargo": "Piper Reckus"
+    },
+    {
+        "id": 440,
+        "Categoria": "O2",
+        "Nombre": "O2 XDA Zinc",
+        "Fecha de actualizacion": "2/5/2024",
+        "Persona a cargo": "Marris Danielsohn"
+    },
+    {
+        "id": 441,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Mi 6",
+        "Fecha de actualizacion": "7/5/2024",
+        "Persona a cargo": "Emelita Castellet"
+    },
+    {
+        "id": 442,
+        "Categoria": "vivo",
+        "Nombre": "vivo U10",
+        "Fecha de actualizacion": "7/5/2024",
+        "Persona a cargo": "Aidan Galvin"
+    },
+    {
+        "id": 443,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-217",
+        "Fecha de actualizacion": "12/2/2024",
+        "Persona a cargo": "Sauveur Gunner"
+    },
+    {
+        "id": 444,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone V860 Smart II",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Berti Gut"
+    },
+    {
+        "id": 445,
+        "Categoria": "LG",
+        "Nombre": "LG Vortex VS660",
+        "Fecha de actualizacion": "11/15/2024",
+        "Persona a cargo": "Isacco Bostick"
+    },
+    {
+        "id": 446,
+        "Categoria": "Plum",
+        "Nombre": "Plum Optimax 10",
+        "Fecha de actualizacion": "11/1/2024",
+        "Persona a cargo": "Jo-ann Victor"
+    },
+    {
+        "id": 447,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Canvas 6 Pro E484",
+        "Fecha de actualizacion": "4/19/2024",
+        "Persona a cargo": "Lelah Marks"
+    },
+    {
+        "id": 448,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung G3812B Galaxy S3 Slim",
+        "Fecha de actualizacion": "7/6/2024",
+        "Persona a cargo": "Bella Pinilla"
+    },
+    {
+        "id": 449,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson Z500",
+        "Fecha de actualizacion": "5/16/2024",
+        "Persona a cargo": "Sutherlan Franies"
+    },
+    {
+        "id": 450,
+        "Categoria": "Lenovo",
+        "Nombre": "Lenovo Tab 2 A7-10",
+        "Fecha de actualizacion": "12/12/2024",
+        "Persona a cargo": "Alfie McGreal"
+    },
+    {
+        "id": 451,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPhone 4",
+        "Fecha de actualizacion": "5/13/2024",
+        "Persona a cargo": "Madlin Ballach"
+    },
+    {
+        "id": 452,
+        "Categoria": "Prestigio",
+        "Nombre": "Prestigio MultiPad 7.0 Prime Duo 3G",
+        "Fecha de actualizacion": "1/22/2024",
+        "Persona a cargo": "Ginny Curnok"
+    },
+    {
+        "id": 453,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 8110 4G",
+        "Fecha de actualizacion": "8/19/2024",
+        "Persona a cargo": "Marylee Antoniewski"
+    },
+    {
+        "id": 454,
+        "Categoria": "LG",
+        "Nombre": "LG GB170",
+        "Fecha de actualizacion": "2/26/2024",
+        "Persona a cargo": "Rudiger Spencelayh"
+    },
+    {
+        "id": 455,
+        "Categoria": "Philips",
+        "Nombre": "Philips T129",
+        "Fecha de actualizacion": "6/15/2024",
+        "Persona a cargo": "Lorenzo Nashe"
+    },
+    {
+        "id": 456,
+        "Categoria": "Sony",
+        "Nombre": "Sony Ericsson K530",
+        "Fecha de actualizacion": "10/12/2024",
+        "Persona a cargo": "Daron Yakov"
+    },
+    {
+        "id": 457,
+        "Categoria": "LG",
+        "Nombre": "LG W3000",
+        "Fecha de actualizacion": "1/21/2024",
+        "Persona a cargo": "Marita O'Cooney"
+    },
+    {
+        "id": 458,
+        "Categoria": "Pantech",
+        "Nombre": "Pantech Vega Racer 2 IM-A830L",
+        "Fecha de actualizacion": "4/13/2024",
+        "Persona a cargo": "Gaile Tarte"
+    },
+    {
+        "id": 459,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy S Blaze 4G T769",
+        "Fecha de actualizacion": "11/17/2024",
+        "Persona a cargo": "Dell Read"
+    },
+    {
+        "id": 460,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6220",
+        "Fecha de actualizacion": "7/17/2024",
+        "Persona a cargo": "Wilhelmina Brearley"
+    },
+    {
+        "id": 461,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6610",
+        "Fecha de actualizacion": "10/22/2024",
+        "Persona a cargo": "Tanner Goldthorpe"
+    },
+    {
+        "id": 462,
+        "Categoria": "LG",
+        "Nombre": "LG C2500",
+        "Fecha de actualizacion": "8/17/2024",
+        "Persona a cargo": "Thornton Wilkenson"
+    },
+    {
+        "id": 463,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 6680",
+        "Fecha de actualizacion": "12/16/2024",
+        "Persona a cargo": "Orland Noton"
+    },
+    {
+        "id": 464,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia C2-00",
+        "Fecha de actualizacion": "2/8/2024",
+        "Persona a cargo": "Lorinda Goodlud"
+    },
+    {
+        "id": 465,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT 556",
+        "Fecha de actualizacion": "12/19/2024",
+        "Persona a cargo": "Reider Waskett"
+    },
+    {
+        "id": 466,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy J",
+        "Fecha de actualizacion": "12/18/2024",
+        "Persona a cargo": "Kevina Lincey"
+    },
+    {
+        "id": 467,
+        "Categoria": "Intex",
+        "Nombre": "Intex Aqua Speed",
+        "Fecha de actualizacion": "2/8/2024",
+        "Persona a cargo": "Tessi Derycot"
+    },
+    {
+        "id": 468,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-358",
+        "Fecha de actualizacion": "10/12/2024",
+        "Persona a cargo": "Bevan Fontes"
+    },
+    {
+        "id": 469,
+        "Categoria": "Vodafone",
+        "Nombre": "Vodafone Smart 4 mini",
+        "Fecha de actualizacion": "10/18/2024",
+        "Persona a cargo": "Xenos Grzegorek"
+    },
+    {
+        "id": 470,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel One Touch T'Pop",
+        "Fecha de actualizacion": "1/1/2025",
+        "Persona a cargo": "Ram Gaiford"
+    },
+    {
+        "id": 471,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung D900",
+        "Fecha de actualizacion": "10/28/2024",
+        "Persona a cargo": "Gayle Kunkel"
+    },
+    {
+        "id": 472,
+        "Categoria": "alcatel",
+        "Nombre": "alcatel OT-102",
+        "Fecha de actualizacion": "10/6/2024",
+        "Persona a cargo": "Glenda Margett"
+    },
+    {
+        "id": 473,
+        "Categoria": "Sagem",
+        "Nombre": "Sagem VS1",
+        "Fecha de actualizacion": "2/19/2024",
+        "Persona a cargo": "Raine Duffree"
+    },
+    {
+        "id": 474,
+        "Categoria": "Kyocera",
+        "Nombre": "Kyocera Torque E6710",
+        "Fecha de actualizacion": "7/5/2024",
+        "Persona a cargo": "Isador Hedley"
+    },
+    {
+        "id": 475,
+        "Categoria": "Lava",
+        "Nombre": "Lava Iris Fuel 50",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Konrad Bitten"
+    },
+    {
+        "id": 476,
+        "Categoria": "Xiaomi",
+        "Nombre": "Xiaomi Redmi 9",
+        "Fecha de actualizacion": "5/24/2024",
+        "Persona a cargo": "Kali Laird-Craig"
+    },
+    {
+        "id": 477,
+        "Categoria": "T-Mobile",
+        "Nombre": "T-Mobile Revvlry",
+        "Fecha de actualizacion": "12/31/2024",
+        "Persona a cargo": "Giffy Loseke"
+    },
+    {
+        "id": 478,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon Q470",
+        "Fecha de actualizacion": "12/12/2024",
+        "Persona a cargo": "Lillian Arends"
+    },
+    {
+        "id": 479,
+        "Categoria": "Tecno",
+        "Nombre": "Tecno Phantom 6",
+        "Fecha de actualizacion": "6/28/2024",
+        "Persona a cargo": "Warden Gostling"
+    },
+    {
+        "id": 480,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 1100",
+        "Fecha de actualizacion": "10/11/2024",
+        "Persona a cargo": "Dasha Piner"
+    },
+    {
+        "id": 481,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia C5 5MP",
+        "Fecha de actualizacion": "5/19/2024",
+        "Persona a cargo": "Dani Jobe"
+    },
+    {
+        "id": 482,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax Vdeo 2",
+        "Fecha de actualizacion": "12/11/2024",
+        "Persona a cargo": "Mano Cornish"
+    },
+    {
+        "id": 483,
+        "Categoria": "Plum",
+        "Nombre": "Plum Mouse",
+        "Fecha de actualizacion": "3/14/2024",
+        "Persona a cargo": "Emlen Terrans"
+    },
+    {
+        "id": 484,
+        "Categoria": "Motorola",
+        "Nombre": "Motorola A1200",
+        "Fecha de actualizacion": "8/17/2024",
+        "Persona a cargo": "Salomon Vassman"
+    },
+    {
+        "id": 485,
+        "Categoria": "Micromax",
+        "Nombre": "Micromax X271",
+        "Fecha de actualizacion": "9/24/2024",
+        "Persona a cargo": "Jolynn Caley"
+    },
+    {
+        "id": 486,
+        "Categoria": "Asus",
+        "Nombre": "Asus Google Nexus 7 (2013)",
+        "Fecha de actualizacion": "4/1/2024",
+        "Persona a cargo": "Ketty Dady"
+    },
+    {
+        "id": 487,
+        "Categoria": "Huawei",
+        "Nombre": "Huawei Mate 30 RS Porsche Design",
+        "Fecha de actualizacion": "3/9/2024",
+        "Persona a cargo": "Agnese Epgrave"
+    },
+    {
+        "id": 488,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 3350",
+        "Fecha de actualizacion": "8/3/2024",
+        "Persona a cargo": "Devan Karoly"
+    },
+    {
+        "id": 489,
+        "Categoria": "ZTE",
+        "Nombre": "ZTE Blade A520",
+        "Fecha de actualizacion": "11/14/2024",
+        "Persona a cargo": "Korie Bidwell"
+    },
+    {
+        "id": 490,
+        "Categoria": "Apple",
+        "Nombre": "Apple iPad 10.2 (2019)",
+        "Fecha de actualizacion": "6/17/2024",
+        "Persona a cargo": "Bronnie Allberry"
+    },
+    {
+        "id": 491,
+        "Categoria": "Celkon",
+        "Nombre": "Celkon C669",
+        "Fecha de actualizacion": "2/29/2024",
+        "Persona a cargo": "Reeta Eaves"
+    },
+    {
+        "id": 492,
+        "Categoria": "Bird",
+        "Nombre": "Bird S1130",
+        "Fecha de actualizacion": "5/12/2024",
+        "Persona a cargo": "Babbette Pleasance"
+    },
+    {
+        "id": 493,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy S6 edge",
+        "Fecha de actualizacion": "5/17/2024",
+        "Persona a cargo": "Corie Lamas"
+    },
+    {
+        "id": 494,
+        "Categoria": "BlackBerry",
+        "Nombre": "BlackBerry Evolve X",
+        "Fecha de actualizacion": "9/18/2024",
+        "Persona a cargo": "Samaria Rowes"
+    },
+    {
+        "id": 495,
+        "Categoria": "LG",
+        "Nombre": "LG GT365 Neon",
+        "Fecha de actualizacion": "1/26/2024",
+        "Persona a cargo": "Yvonne Farens"
+    },
+    {
+        "id": 496,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia 5200",
+        "Fecha de actualizacion": "11/1/2024",
+        "Persona a cargo": "Nicol Tincknell"
+    },
+    {
+        "id": 497,
+        "Categoria": "Asus",
+        "Nombre": "Asus Zenfone Max Shot ZB634KL",
+        "Fecha de actualizacion": "5/6/2024",
+        "Persona a cargo": "Hashim Spieck"
+    },
+    {
+        "id": 498,
+        "Categoria": "Philips",
+        "Nombre": "Philips X518",
+        "Fecha de actualizacion": "8/11/2024",
+        "Persona a cargo": "Lynn Meech"
+    },
+    {
+        "id": 499,
+        "Categoria": "Nokia",
+        "Nombre": "Nokia X",
+        "Fecha de actualizacion": "1/24/2024",
+        "Persona a cargo": "Mick Zanetello"
+    },
+    {
+        "id": 500,
+        "Categoria": "Samsung",
+        "Nombre": "Samsung Galaxy A02",
+        "Fecha de actualizacion": "9/10/2024",
+        "Persona a cargo": "Ilyse MacRirie"
+    }
+]
