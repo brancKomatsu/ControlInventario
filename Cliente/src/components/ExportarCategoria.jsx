@@ -78,6 +78,13 @@ const categorias = () => {
                         cell: (info) => dayjs(info.getValue()).format('DD/MM/YY')
                     }
                     return column
+                } else if (key === "Documento_firmado") {
+                    let column = {
+                        header: key.toUpperCase(),
+                        accessorKey: key,
+                        cell: ({getValue}) => getValue() ? 'Si' : 'No'
+                    }
+                    return column
                 } else {
                     let column = {
                         header: key.toUpperCase(),
@@ -112,7 +119,8 @@ const categorias = () => {
         const formattedData = sheetData.map(item => ({
             ...item,
             creacion_equipo: item.creacion_equipo ? dayjs(item.creacion_equipo).format('DD-MM-YYYY') : "",
-            eliminacion_equipo: item.eliminacion_equipo ? dayjs(item.eliminacion_equipo).format('DD-MM-YYYY') : ""
+            eliminacion_equipo: item.eliminacion_equipo ? dayjs(item.eliminacion_equipo).format('DD-MM-YYYY') : "",
+            Documento_firmado: item.Documento_firmado ? 'Si' : 'No'
         }))
         console.log(formattedData)
 

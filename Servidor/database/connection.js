@@ -2,9 +2,9 @@ import sql from 'mssql'
 
 const dbSettings = {
     user: "sa",
-    password: "Modular2025..!!",
-    server: "CL-BUROTTO",
-    database: "Final",
+    password: `Modular2025..!!`,
+    server: `VM-INV-MMS\\DB`,
+    database: "Control_Inventario",
     options: {
         encrypt: false,
         trustServerCertificate: true

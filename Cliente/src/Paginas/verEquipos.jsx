@@ -71,7 +71,7 @@ const PaginaPrincipal = () => {
         },
         {
             header: "Ubicacion",
-            accessorKey: 'ubicacion'
+            accessorKey: 'nombre_oficina'
         },
         {
             header: "Lac",

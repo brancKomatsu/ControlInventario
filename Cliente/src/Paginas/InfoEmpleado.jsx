@@ -15,6 +15,8 @@ const InfoEmpleado = () => {
     const [eliminar, setEliminar] = useState(false)
     const [options, setOptions] = useState({})
     const [lac, setLac] = useState()
+    const [oficinas, setOficinas] = useState([])
+    const [optionsOficina, setOptionsOficinas] = useState({})
     const rut = useParams()
     const navigate = useNavigate()
 
@@ -29,6 +31,8 @@ const InfoEmpleado = () => {
         }
         fetchDato()
     }, [])
+    console.log(empleado || "")
+    console.log(optionsOficina || "")
 
     useEffect(() => {
         const fecthDatos = async () => {
@@ -44,6 +48,27 @@ const InfoEmpleado = () => {
         }
         fecthDatos()
     }, [])
+
+    useEffect(() => {
+        const fecthDatos = async () => {
+            const oficina = await Servicio.oficinas()
+            setOficinas(oficina)
+        }
+        fecthDatos()
+    }, [])
+    useEffect(() => {
+        if (oficinas.length > 0) {
+            console.log("Las oficinas son: ", oficinas)
+            const valores = oficinas.map(item => ({
+                value: item.nombre_oficina,
+                label: `${item.nombre_oficina}`                                         
+            }))
+            if (JSON.stringify(valores) !== JSON.stringify(oficinas)) {
+                setOptionsOficinas(valores);
+            }
+            console.log(oficinas)
+        }
+    }, [oficinas])
 
     const customStyles = {
         control: (provided) => ({
@@ -72,8 +97,8 @@ const InfoEmpleado = () => {
             eliminarEmpleado()
         }
     }, [eliminar])
-    const handleChange = (e, key, value) => {
-        e.preventDefault()
+    const handleChange = ( key, value) => {
+        console.log(key, value)
         setEmpleado(prev => ({
             ...prev,
             [key]: value
@@ -88,7 +113,8 @@ const InfoEmpleado = () => {
             nombre: empleado.nombre.toUpperCase(),
             apellido: empleado.apellido.toUpperCase()
         }
-
+        console.log("El valor a subir es: ", nuevoValor)
+        
         if (confirmacion) {
             const respuesta = await Servicio.actualizarEmpleado(nuevoValor)
             if (respuesta) {
@@ -97,10 +123,11 @@ const InfoEmpleado = () => {
         } else {
             return null
         }
+        
     }
 
     return (
-        <Card style={{ width: "550px" }}>
+        <Card style={{ width: "600px" }}>
             <Card.Header className="border rounded">
                 {
                     empleado ? 
@@ -112,14 +139,19 @@ const InfoEmpleado = () => {
             <Card.Body>
                 <Form onSubmit={handleSubmit}>
                     {
-                        empleado && options.length > 0 ? (
+                        empleado && options.length > 0 && optionsOficina.length > 0 ? (
                                 Object.entries(empleado).map(([key, item]) => {
                                     if (key === "lac") {
                                         return (
                                             <>
                                                 <InputGroup key={key}>
                                                     <InputGroup.Text>{key}</InputGroup.Text>
-                                                    <Select options={options} value={options.find(option => option.value === item)} styles={customStyles} onChange={(selectedOption) => handleChange(key, selectedOption.value)} />
+                                                    <Select 
+                                                        options={options} 
+                                                        value={options.find(option => option.value === item)} 
+                                                        styles={customStyles} 
+                                                        onChange={(selectedOption) => handleChange(key, selectedOption.value)} 
+                                                    />
                                                 </InputGroup>
                                                 <br />
                                             </>
@@ -140,6 +172,21 @@ const InfoEmpleado = () => {
                                             </>
                                         )
                                     }
+                                    if (key === "oficina") {
+                                        return (
+                                            <>
+                                                <InputGroup key={key}>
+                                                    <InputGroup.Text>{key}</InputGroup.Text>
+                                                    <Select 
+                                                    options={optionsOficina} 
+                                                    value={optionsOficina.find(option => option.value === item)} 
+                                                    styles={customStyles} 
+                                                    onChange={(selectedOption) => handleChange(key, selectedOption.value)} />
+                                                </InputGroup>
+                                                <br />
+                                            </>
+                                        )
+                                    }
                                     return (
                                         <>
                                             <InputGroup key={key}>
@@ -147,7 +194,7 @@ const InfoEmpleado = () => {
                                                 <Form.Control
                                                     placeholder={item}
                                                     value={item}
-                                                    onChange={(e) => handleChange(e, key, e.target.value)}
+                                                    onChange={(e) => handleChange(key, e.target.value)}
                                                 />
                                             </InputGroup>
                                             <br />

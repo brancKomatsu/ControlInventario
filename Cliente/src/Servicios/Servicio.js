@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = "http://192.168.12.110:8080"
+const baseUrl = "http://172.20.2.5:8080"
 
 //<--------- verEquipos ------------------>
 const verEquipos = async () => {
@@ -31,6 +31,17 @@ const tablaCategoria = async info => {
         console.error("Hubo un error al obtener los datos: ", error)
     }
 }
+const documentoFirmado = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/subirArchivo`, info,
+            { header: {'Content-Type': 'multipart/form-data'} })
+        console.log(respuesta)
+        return respuesta
+    } catch (error) {
+        console.error("Hubo un error al enviar la informacion al servidor", error)
+    }
+}
 
 //<--------- Empleados ------------------->
 const datoEmpleados = async () => {
@@ -59,7 +70,7 @@ const crearEmpleado = async info => {
         console.log(respuesta)
         return respuesta
     } catch (error) {
-        console.erro("HUbo un error en la creacion de un empleado", error)
+        console.error("HUbo un error en la creacion de un empleado", error)
     }
 }
 //--> Empleado Unico
@@ -280,6 +291,84 @@ const lac = async () => {
         console.error("Hubo un error al conseguir los nombres de los lac", error)
     }
 }
+const subirLac = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/subirLac`, info)
+        console.log(respuesta)
+        return respuesta
+    } catch (error) {
+        console.error("Hubo un error al subir el equipo", error)
+    }
+}
+const actualizarLac = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/actualizarLac`, info)
+        console.log(respuesta)
+        return respuesta
+    } catch (error) {
+        console.error("Hubo un error al subir el equipo", error)
+    }
+}
+const eliminarLac = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/EliminarLac`, info)
+        console.log(respuesta)
+        return respuesta
+    } catch (error) {
+        console.error("Hubo un error al subir el equipo", error)
+    }
+}
+const oficinas = async () => {
+    try {
+        const respuesta = await axios.get(`${baseUrl}/oficina`)
+        console.log(respuesta.data)
+        return respuesta.data
+    } catch (error) {
+        console.error("Hubo un error al conseguir los nombres de las oficinas", error)
+    }
+}
+const paises = async () => {
+    try {
+        const respuesta = await axios.get(`${baseUrl}/paises`)
+        console.log(respuesta.data)
+        return respuesta.data
+    } catch (error) {
+        console.error("Hubo un error al conseguir los nombres de los paises", error)
+    }
+}
+const agregarOficina = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/agregarOficina`, info)
+        console.log(respuesta.data)
+        return respuesta.data
+    } catch (error) {
+        console.error("Hubo un error al conseguir los nombres de los paises", error)
+    }
+}
+const oficinaUnica = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.get(`${baseUrl}/oficinaUnica/${info}`)
+        console.log(respuesta.data)
+        return respuesta.data
+    } catch (error) {
+        console.error("Hubo un error al conseguir los valores de la oficina", error)
+    }
+}
+const actualizarOficina = async info => {
+    console.log(info)
+    try {
+        const respuesta = await axios.post(`${baseUrl}/actualizarOficina`, info)
+        return respuesta
+        console.log(respuesta)
+    } catch (error) {
+        console.error("Hubo un error al actualizar la informacion", error)
+    }
+}
 
 export default {
     registro,
@@ -299,6 +388,7 @@ export default {
     actualizarCaracteristica,
     nombreApellido,
     lac,
+    oficinas,
     asignarUsuario,
     crearMantenimiento,
     designarEquipo,
@@ -307,5 +397,13 @@ export default {
     categorias,
     tablaCategoria,
     actualizarEmpleado,
-    eliminarEquipo
+    eliminarEquipo,
+    subirLac,
+    actualizarLac,
+    eliminarLac,
+    paises,
+    agregarOficina,
+    oficinaUnica,
+    actualizarOficina,
+    documentoFirmado
 }

@@ -2,8 +2,11 @@ import { Router } from 'express'
 import { getConnection } from '../database/connection.js'
 import sql from 'mssql'
 import dayjs from 'dayjs'
+import multer from 'multer'
 
 const router = Router()
+const storage = multer.memoryStorage()
+const upload = multer({storage: storage})
 //<-------------- verEquipos ----------------->
 router.get('/verEquipos', async (req, res) => {
 	const pool = await getConnection()
@@ -28,7 +31,7 @@ router.get("/categorias", async (req, res) => {
 router.get("/tablaCategorias/:categoria", async (req, res) => {
     const pool = await getConnection()
     const categoria = req.params.categoria
-    console.log(categoria)
+    console.log("La categoria es: ", categoria)
     
     try {
         const respuesta = await pool.request()
@@ -38,6 +41,23 @@ router.get("/tablaCategorias/:categoria", async (req, res) => {
         res.send(respuesta.recordset)
     } catch (error) {
         console.error("No se pudo conseguir la tabla de la categoria", error)
+    }
+})
+//--> Subir archivo
+router.post("/subirArchivo", upload.single('archivo'), async (req, res) => {
+    const pool = await getConnection()
+    const asset = req.body.asset
+    const archivo = req.file.buffer
+    console.log(asset, archivo)
+    try {
+        const respuesta = await pool.request()
+            .input('archivo', sql.VarBinary, archivo)
+            .input('asset', sql.Int, asset)
+            .query('update movimientos set documento_firmado=@archivo where asset=@asset')
+        console.log("Se pudo actualizar el codumento firmado", respuesta)
+        res.send(respuesta)
+    } catch (error) {
+        console.error("Hubo un error al subir el archivo", error)
     }
 })
 
@@ -91,7 +111,7 @@ router.post("/Login", async (req, res) => {
 router.get('/datosEmpleados', async (req, res) => {
     const pool = await getConnection()
     const info = await pool.request().query('select * from Informacion_empleados')
-    //console.log(info)
+    console.log("Los datos de los empleados son: ", info.recordset)
     res.json(info.recordset)
 })
 //--> Columnas Empleados
@@ -105,8 +125,16 @@ router.get('/columnasEmpleados', async (req, res) => {
 router.post('/crearEmpleado', async (req, res) => {
     const pool = await getConnection()
     const info = req.body
+    console.log(info)
+    
     const valores = await Promise.all(
         Object.entries(info).map( async ([key, value]) => {
+            if (key === "oficina_id") {
+                const id_oficina = await pool.request()
+                    .input('oficina', sql.VarChar, info.oficina_id)
+                    .query('select id_oficina from oficina where nombre_oficina=@oficina')
+                return id_oficina.recordset[0].id_oficina
+            }
             if ( key === "nombre" || key === "apellido" || key === "lac") {
                 value = value.toUpperCase()
             }
@@ -120,21 +148,23 @@ router.post('/crearEmpleado', async (req, res) => {
         })
     )
     const valoresString = valores.join(', ')
-    console.log("El empleado a agregar es el siguiente: ", valores)
 
     const columnas = Object.entries(info).map(([key, value]) => {
         return (
             `[${key}]`
         )
     }).join(', ')
-    console.log("Las columnas son: ", columnas)
+    console.log("El empleado a agregar es el siguiente: ",columnas,  valores)
+
     try {
-        const respuesta = await pool.request().query(`insert into empleados (${columnas}, estado) values (${valoresString}, 5)`)
+        const respuesta = await pool.request()
+            .query(`insert into empleados (${columnas}, estado) values (${valoresString}, 5)`)
         console.log("Se ha enviado la informacion: ", respuesta)
         res.send()
     } catch (error) {
         console.error("Hubo un error al enviar la informacion a la base de datos", error)
     }
+    
 })
 //--> Empleado unico
 router.get("/EmpleadoUnico/:asset", async (req, res) => {
@@ -192,6 +222,12 @@ router.post("/modificarEmpleado", async (req, res) => {
         .input('lac', sql.VarChar, info.lac)
         .query('select id_lac from lac where nombre_lac=@lac')
     console.log(lac.recordset[0].id_lac)
+
+    const oficina = await pool.request()
+        .input('oficina', sql.VarChar, info.oficina)
+        .query('select id_oficina from oficina where nombre_oficina=@oficina')
+    console.log(oficina.recordset[0].id_oficina)
+    
     try {
         const respuesta = await pool.request()
             .input('rut', sql.VarChar,info.rut)
@@ -199,7 +235,8 @@ router.post("/modificarEmpleado", async (req, res) => {
             .input('apellido', sql.VarChar, info.apellido)
             .input('lac', sql.Int, lac.recordset[0].id_lac)
             .input('correo', sql.VarChar, info.correo_electronico)
-            .query(`update empleados set rut=@rut, nombre=@nombre, apellido=@apellido, lac=@lac, correo_electronico=@correo, estado=5 where rut=@rut`)
+            .input('oficina', sql.Int, oficina.recordset[0].id_oficina)
+            .query(`update empleados set rut=@rut, nombre=@nombre, apellido=@apellido, lac=@lac, correo_electronico=@correo, estado=5, oficina_id=@oficina where rut=@rut`)
         res.send(respuesta)
     } catch (error) {
         console.error("No se pudo modificar el empleado", error)
@@ -257,7 +294,7 @@ router.post("/subirEquipo", async (req, res) => {
         const movimientos = await pool.request()
             .input('asset', sql.Int, asset)
             .input('fecha', sql.Date, fecha)
-            .query(`insert into movimientos (asset, rut_persona, ultima_modificacion, ubicacion, estado) values (@asset, 0, @fecha, 9, 2)`)
+            .query(`insert into movimientos (asset, rut_persona, ultima_modificacion, estado) values (@asset, 0, @fecha, 2)`)
         console.log("movimientos: ", movimientos)
     } catch (error) {
         console.error("Hubo un error en la insercion de datos de la primary key", error)
@@ -340,9 +377,35 @@ router.get("/Equipo/:asset", async (req,res) => {
     //console.log("La informacion general es: ", general_info)
 
     const respuesta_final = [nombre_tabla, caracteristicas, general_info]
-    //console.log("respuesta final: ", respuesta_final)
+    console.log("respuesta final: ", respuesta_final[0].recordset, respuesta_final[1].recordset, respuesta_final[2].recordset)
 
     res.send(respuesta_final)
+})
+//--> Desacargar archivo
+router.get('/descargarArchivo/:asset', async (req, res) => {
+    const pool = await getConnection()
+    const asset = req.params.asset
+
+    try {
+        const resultado = await pool.request()
+            .input('asset', sql.Int, asset)
+            .query(`select documento_firmado, (empleados.nombre + ' ' + empleados.apellido) as nombre from movimientos join empleados on movimientos.rut_persona=empleados.rut where movimientos.asset=@asset`)
+
+        console.log(resultado)
+        const archivo = resultado.recordset[0].documento_firmado
+        const nombre = resultado.recordset[0].nombre
+
+        if (archivo) {
+            const nombre_archivo = `Documento_${nombre}.pdf`
+            res.contentType('application/pdf')
+            res.setHeader('Content-Disposition', `attachment; filename="${nombre_archivo}"`)
+            res.send(archivo)
+        } else {
+            res.status(404).send('Archivo no encontrado')
+        }
+    } catch (error) {
+        console.error("No se pudo cnseguir la informacion del archivo", error)
+    }
 })
 //--> columnas Caracteristicas
 router.get("/Caracteristicas/:asset", async (req, res) => {
@@ -408,9 +471,6 @@ router.post("/actualizarCaracteristica", async (req, res) => {
     } catch (error) {
         console.error("Hubo un error al actualizar la tabla", error)
     }
-
-
-
 })
 //--> NombreApellido usuarios
 router.get("/nombreapellido", async (req, res) => {
@@ -435,13 +495,20 @@ router.post("/actualizarUsuario", async (req, res) => {
         .input('apellido', sql.VarChar, info.apellido)
         .query('select rut from empleados where nombre=@nombre and apellido=@apellido')
     console.log("El rut de la persona es: ", rut_persona.recordset[0].rut)
-    
+
+    const pais = await pool.request()
+        .input('rut', sql.VarChar, rut_persona.recordset[0].rut)
+        .query('select nombre_pais from pais join oficina on pais.id_pais=oficina.pais_id join empleados on oficina.id_oficina=empleados.oficina_id where empleados.rut=@rut')
+    console.log("El pais de la persona es: ", pais.recordset[0].nombre_pais)
+    const aux = pais.recordset[0].nombre_pais
+    const alias = aux.substring(0,2).toUpperCase()
+
     try {
         const movimientos = await pool.request()
             .input('rut', sql.VarChar, rut_persona.recordset[0].rut)
             .input('asset', sql.Int, asset)
             .input('fecha', sql.Date, fecha)
-            .query(`update movimientos set rut_persona=@rut, ultima_modificacion=@fecha, estado=1, alias='CL-${primerApellido}' where asset=@asset`)
+            .query(`update movimientos set rut_persona=@rut, ultima_modificacion=@fecha, estado=1, alias='${alias}-${primerApellido}' where asset=@asset`)
         console.log(movimientos)
     } catch (error) {
         console.error("Hubo un error al actualizar en tabla movimientos", error)
@@ -473,7 +540,7 @@ router.post("/crearMantenimiento", async (req, res) => {
         const respuesta = await pool.request()
             .input('asset', sql.Int, asset)
             .input('fecha', sql.Date, fecha)
-            .query('update movimientos set ultima_modificacion=@fecha, estado=4, ubicacion=9 where asset=@asset')
+            .query('update movimientos set ultima_modificacion=@fecha, estado=4 where asset=@asset')
         console.log(respuesta)
     } catch (error) {
         console.error("Hubo un error en la actualizacion de tabla movimientos", error)
@@ -490,7 +557,7 @@ router.post("/crearMantenimiento", async (req, res) => {
         console.error("Hubo problema al generar dato en historial_mantenimiento", error)
     }
 })
-//--> Designar equipo
+//--> Designar Equipo
 router.post("/designarEquipo", async (req, res) => {
     const pool = await getConnection()
     const info = req.body
@@ -503,7 +570,7 @@ router.post("/designarEquipo", async (req, res) => {
         const respuesta = await pool.request()
             .input('asset', sql.Int, asset)
             .input('fecha', sql.Date, fecha)
-            .query(`update movimientos set rut_persona=0, ultima_modificacion=@fecha, ubicacion=9, estado=2, alias='' where asset=@asset`)
+            .query(`update movimientos set rut_persona=0, ultima_modificacion=@fecha, estado=2, alias='', documento_firmado=null where asset=@asset`)
         console.log("Se actualizo movimientos: ", respuesta)
     } catch (error) {
         console.error("Hubo un problema al designar equipo en movimientos", error)
@@ -533,6 +600,7 @@ router.post("/designarEquipo", async (req, res) => {
         }
     }
 })
+//--> Eliminar Equipo
 router.post("/eliminarEquipo", async (req, res) => {
     const pool = await getConnection()
     const info = req.body
@@ -617,16 +685,163 @@ router.get('/historialUsuarios/:asset', async (req, res) => {
 })
 
 //<-------------- Generales ------------------>
+//--> Conseguir Lacs
 router.get("/LAC", async (req, res) => {
     const pool = await getConnection()
     try {
-        const info = await pool.request().query('select nombre_lac from lac')
+        const info = await pool.request().query('select * from lac')
         console.log(info)
         res.send(info.recordset)
     } catch (error) {
         console.error("Hubo error al conseguir valores de los LAC", error)
     }
+})
+//--> Agregar Lac
+router.post("/subirLac", async (req, res) => {
+    const pool = await getConnection()
+    const info = req.body.lac
+    console.log(info)
+    const valor = info.toUpperCase()
+    try {
+        const respuesta = await pool.request()
+            .input("nombre_lac", sql.VarChar, valor)
+            .query('insert into lac (nombre_lac) values (@nombre_lac)')
+        console.log(respuesta)
+        res.send(respuesta)
+    } catch (error) {
+        console.error("Hubo error al conseguir valores de los LAC", error)
+    }
+})
+//--> Actualizar Lac
+router.post("/actualizarLac", async (req, res) => {
+    const pool = await getConnection()
+    const id_lac = req.body.id_lac
+    const nuevo = req.body.nuevo
+    console.log(id_lac, nuevo)
+    
+    const valor = nuevo.toUpperCase()
+    try {
+        const respuesta = await pool.request()
+            .input("lac", sql.VarChar, valor)
+            .query(`update lac set nombre_lac=@lac where id_lac='${id_lac}'`)
+        console.log(respuesta)
+        res.send(respuesta)
+    } catch (error) {
+        console.error("Hubo error al actualizar el Lac", error)
+    }
+    
+})
+//--> Eliminar Lac
+router.post("/EliminarLac", async (req, res) => {
+    const pool = await getConnection()
+    const id_lac = req.body.id_lac
+    console.log(id_lac)
 
+    try {
+        const empleados = await pool.request().query(`update empleados set lac=null, estado=3 where lac=${id_lac}`)
+        console.log(empleados)
+    } catch (error) {
+        console.error("Hubo un error al desactivar los empleados", error)
+    }
+
+    try {
+        const movimientos = await pool.request().query(`update movimientos set estado=3 from movimientos join equipos on movimientos.asset=equipos.asset_equipo where equipos.lac=${id_lac}`)
+        console.log(movimientos)
+    } catch (error) {
+        console.error("Hubo un error al desactivar en tabka movimientos", error)
+    }
+
+    try {
+        const equipos = await pool.request().query(`update equipos set lac=null where lac=${id_lac}`)
+        console.log(equipos)
+    } catch (error) {
+        console.error("Hubo un error al desactivar los equipos", error)
+    }
+
+    try {
+        const respuesta = await pool.request().query(`delete from lac where id_lac=${id_lac}`)
+        console.log(respuesta)
+        res.send(respuesta)
+    } catch (error) {
+        console.error("Hubo error al eliminar el Lac", error)
+    }
+
+})
+//--> Conseguir nombres de oficinas
+router.get("/oficina", async (req, res) => {
+    const pool = await getConnection()
+    try {
+        const info = await pool.request().query('select * from modificacion_oficina')
+        console.log("Los nombres de las oficinas son: ", info.recordset)
+        res.send(info.recordset)
+    } catch (error) {
+        console.error("Hubo error al conseguir los nombres de las oficinas", error)
+    }
+})
+//--> Conseguir paises
+router.get("/paises", async (req, res) => {
+    const pool = await getConnection()
+    try {
+        const info = await pool.request().query('select nombre_pais from pais')
+        console.log("Los nombres de los paises son: ", info.recordset)
+        res.send(info.recordset)
+    } catch (error) {
+        console.error("Hubo error al conseguir los nombres de las oficinas", error)
+    }
+})
+//--> Agregar oficina
+router.post("/agregarOficina", async (req, res) => {
+    const pool = await getConnection()
+    const oficina = req.body.oficina
+    const pais = req.body.pais
+    console.log(oficina, pais)
+
+    const aux = await pool.request().query(`select id_pais from pais where nombre_pais='${pais}'`)
+    const id_pais = aux.recordset[0].id_pais
+
+    try {
+        const respuesta = await pool.request().query(`insert into oficina (pais_id, nombre_oficina) values (${id_pais}, '${oficina}')`)
+        console.log(respuesta)
+        res.send(respuesta)
+    } catch (error) {
+        console.error("Hubo error al agregar oficina", error)
+    }
+})
+//--> Oficina unica
+router.get('/oficinaUnica/:id', async (req, res) => {
+    const pool = await getConnection()
+    const oficina = req.params.id
+    console.log("La oficina es: ", oficina)
+    try {
+        const respuesta = await pool.request()
+            .input("id", sql.Int, oficina)
+            .query('select nombre_oficina, nombre_pais from oficina join pais on pais_id=id_pais where id_oficina=@id')
+        console.log(respuesta.recordset[0])
+        res.send(respuesta.recordset)
+    } catch (error) {
+        console.error("Hubo un error al conseguir la informacion de la oficina", error)
+    }
+})
+//--> actualizar oficina
+router.post('/actualizarOficina', async (req, res) => {
+    const pool = await getConnection()
+    const id = req.body.id_oficina
+    const nombre = req.body.nombre_oficina
+    const pais = req.body.nombre_pais
+    const aux = await pool.request()
+        .input('pais', sql.VarChar, pais)
+        .query('select id_pais from pais where nombre_pais=@pais')
+    const id_pais = aux.recordset[0].id_pais
+    console.log(id, nombre, id_pais)
+    try {
+        const respuesta = await pool.request()
+            .input('pais', sql.Int, id_pais)
+            .query(`update oficina set pais_id=@pais, nombre_oficina='${nombre}' where id_oficina=${id}`)
+        res.send(respuesta)
+        console.log(respuesta)
+    } catch (error) {
+        console.error("Hubo un error al actualizar la oficina", error)
+    }
 })
 
 export default router

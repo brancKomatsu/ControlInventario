@@ -156,6 +156,7 @@ const CreacionEquipo = () => {
             
             const respuesta = await Servicio.subirEquipo(datoAsubir)
             console.log(respuesta)
+            
             if (respuesta) {
                 navigate("/verEquipos")
             } else {

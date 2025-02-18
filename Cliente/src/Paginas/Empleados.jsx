@@ -71,6 +71,10 @@ const Empleados = () => {
             accessorKey: 'apellido'
         },
         {
+            header: 'Oficina',
+            accessorKey: 'oficina'
+        },
+        {
             header: 'Lac',
             accessorKey: 'lac'
         },

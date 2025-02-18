@@ -4,7 +4,7 @@ import productsRoutes from './routes/movimientos.routes.js'
 
 const app = express()
 const corsOptions = {
-    origin: ("http://192.168.12.110:51915")
+    origin: ("http://172.20.2.5:51915")
 }
 
 app.use(express.json())

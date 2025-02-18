@@ -2,6 +2,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -26,10 +27,14 @@ const Encabezado = () => {
             //console.log("Sesion esta iniciada en pagina encabezado")
             return (
                 <>
-                    <span className="text-white">
+                    <span className="text-white d-flex align-items-center">
                         {usuario[0]}
-                        <Image src="../Images/Persona.svg" width={25} height={25} roundedCircle />
+                        <Image src="../Images/Persona.svg" width={25} height={25} roundedCircle className="ms-2"/>
                     </span>
+                    <NavDropdown title="Adicionales" id="navbarScrollingDropdown">
+                        <NavDropdown.Item as={Link} to="/Lac">LAC</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/Oficinas">Oficinas</NavDropdown.Item>
+                    </NavDropdown>
                 </>
             )
         } else {

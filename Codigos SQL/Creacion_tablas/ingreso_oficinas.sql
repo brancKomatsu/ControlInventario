@@ -1,0 +1,1 @@
+insert into oficina (pais_id, nombre_oficina) values (38, 'oficina Santiago'), (38, 'oficina Las Condes')

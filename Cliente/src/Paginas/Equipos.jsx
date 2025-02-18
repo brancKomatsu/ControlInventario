@@ -12,6 +12,7 @@ import Servicio from '../Servicios/Servicio'
 import { Link } from 'react-router-dom'
 import ModificarEquipo from "../components/modificarEquipo"
 import AsignarEquipo from "../components/asignarEquipo"
+import { Tooltip } from 'react-tooltip'
 
 const Equipos = () => {
     const [modificarEquipo, setmodificarEquipo] = useState(true)//Boton para modificar equipo
@@ -31,7 +32,7 @@ const Equipos = () => {
             //console.log("El asset es: ", asset)
             const respuesta = await Servicio.Equipos(asset)
             setInfo(respuesta)
-            //console.log("La informacion conseguida es: ", respuesta)
+            console.log("La informacion conseguida es: ", respuesta)
         }
         if (asset) {
             conseguirInfo()
@@ -66,7 +67,7 @@ const Equipos = () => {
 
     useEffect(() => {
         if (informacionValida && informacionValida.length > 7) {
-            setenUso(`${informacionValida[7].value}`);
+            setenUso(`${informacionValida[6].value}`);
         }
     }, [informacionValida]);
     if (enUso) {
@@ -74,7 +75,7 @@ const Equipos = () => {
     }
     //Aqui se designara equipo
     if (designarEquipo) {
-        const equipodesignado = { asset: asset, estado: informacionValida[7].value }
+        const equipodesignado = { asset: asset, estado: informacionValida[6].value }
         console.log("El equipo a designar es: ", equipodesignado)
         
         const actualizarDesignar = async () => {
@@ -89,6 +90,29 @@ const Equipos = () => {
     const Form_info = () => {
         if (!informacionValida) return null
         if (!caracteristicas) return null
+
+        const [file, setFile] = useState()
+        const [cambiarFirmado, setCambiarFirmado] = useState(false)
+        const url = `http://172.20.2.5:8080/descargarArchivo/${informacionValida[0].value}`
+        if (informacionValida && informacionValida[11]?.value && !file) {
+            setFile(informacionValida[11].value.data)
+        }
+        
+        const handleChange = async (e) => {
+            e.preventDefault()
+            const newFile = e.target.files[0]
+            const archivo = new FormData()
+            archivo.append('asset', informacionValida[0].value)
+            archivo.append('archivo', newFile)
+            try {
+                const respuesta = await Servicio.documentoFirmado(archivo)
+                console.log(respuesta)
+                respuesta ? navigate(0) : null
+            } catch (error) {
+                console.error("Hubo un error al subir el archivo", error)
+            }
+        }
+
         console.log("informacionValida: ", informacionValida)
         console.log("caracteristicas: ", caracteristicas)
         return (
@@ -130,6 +154,56 @@ const Equipos = () => {
                             }
 
                             if (informacionValida[index].key === "apellido") return null
+
+                            if (item.key === "Documento firmado") {
+                                return (
+                                    <>
+                                        <InputGroup>
+                                            <InputGroup.Text>Documento firmado</InputGroup.Text>
+                                            {
+                                                getUsuario && informacionValida[1].value !== '' ?
+                                                    <>
+                                                        {
+                                                            !file || cambiarFirmado ?
+                                                                <Form.Control
+                                                                    type="file"
+                                                                    disabled={!cambiarFirmado}
+                                                                    onChange={handleChange}
+                                                                    className="mb-2"
+                                                                />
+                                                                :
+                                                                <Form.Text className="text-muted">
+                                                                        <div className="d-flex align-items-center">
+                                                                        <Button as="a" href={url} download variant="outline-secondary" className="m-2 p-2">Documento_{informacionValida[1].value}_{informacionValida[2].value}</Button>
+                                                                        </div>
+                                                                </Form.Text>
+                                                        }
+                                                        <Form.Check
+                                                            type="checkbox"
+                                                            className="p-2 mt-2"
+                                                            data-tooltip-id="id-tooltip"
+                                                            data-tooltip-content="Cambiar archivo"
+                                                            onClick={() => setCambiarFirmado(!cambiarFirmado)}
+                                                        />
+                                                        <Tooltip id="id-tooltip" place="top" type="dark" effect="solid" />
+                                                    </>
+                                                    :
+                                                    <Form.Text className="text-muted border">
+                                                        {
+                                                            file ? 
+                                                                <div className="d-flex align-items-center">
+                                                                    <Button as="a" href={url} download variant="outline-secondary" className="m-2 p-2">Documento_{informacionValida[1].value}</Button>
+                                                                </div>
+                                                                :
+                                                                "No hay archivo actualmente"
+                                                        }
+                                                    </Form.Text>
+                                            }
+                                        </InputGroup>
+                                        <br />
+                                    </>
+                                )
+                            }
                             return(
                                 <>
                                     <InputGroup key={index}>
@@ -163,7 +237,7 @@ const Equipos = () => {
                         {
                             getUsuario && asignarEquipo ? 
                                 <Col>
-                                    <Button onClick={() => setmodificarEquipo(!modificarEquipo)} title="Modificar especificaciones del equipo"> Modificar equipo </Button>
+                                    <Button onClick={() => setmodificarEquipo(!modificarEquipo)} title="Modificar especificaciones del equipo"> { modificarEquipo ? "ModificarEquipo" : "Volver atras" } </Button>
                                 </Col>
                                 : null
                         }
@@ -212,11 +286,11 @@ const Equipos = () => {
                                         </Button>
                                     )}
                                 </Col>
-                                <Col>
-                                    <Button onClick={() => navigate('/verEquipos')}> Volver atras</Button>
-                                </Col>
                             </>
                         )}
+                        <Col>
+                            <Button onClick={() => navigate('/verEquipos')}> Volver atras</Button>
+                        </Col>
                     </Row>
                 </Card.Body>
             </Card>
