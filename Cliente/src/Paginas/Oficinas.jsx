@@ -15,16 +15,19 @@ const Oficinas = () => {
     const [sorting, setSorting] = useState([])
     const [datos, setDatos] = useState([])
     const [filtering, setFiltering] = useState("")
-    const [user, setUser] = useState()
     const navigate = useNavigate()
-    const [idOficina, setidOficina] = useState()
 
+    //Verificar si el usuario a iniciado sesion al ingresar a esta pagina
+    useEffect(() => {
+        if (!sessionStorage.getItem("usuario")) navigate('/home')
+    }, [])
+
+    //Obtencion de informacion de las oficinas
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const respuesta = await Servicio.oficinas()
                 setDatos(respuesta)
-                setidOficina(respuesta.id_oficina)
                 console.log(respuesta)
             } catch (error) {
                 console.error("errros al cargar los datos", error)
@@ -33,6 +36,7 @@ const Oficinas = () => {
         fetchData()
     }, [])
 
+    //Headers de las tablas
     const columns = [
         {
             header: "Id oficina",
@@ -56,6 +60,41 @@ const Oficinas = () => {
         }
     ]
 
+    //Funcion para filtrar lo que escriba el usuario en el buscador global
+    const filtrarPorSecuencia = (row, filter) => {
+        if (!filter) return datos
+        //console.log(row,filter)
+        for (let letra of filter) {
+            if (!letra) break
+            let palabraEncontrada = false
+
+            for (let cell of row.getVisibleCells()) {
+
+                const cellValue = cell.getValue()?.toString().toLowerCase()
+                if (!cellValue) continue
+
+                let filterIndex = 0
+                for (let char of cellValue) {
+
+                    if (char === letra[filterIndex]) {
+                        filterIndex++
+                    } else {
+                        break
+                    }
+
+                    if (filterIndex === letra.length) {
+                        palabraEncontrada = true
+                        break
+                    }
+                }
+                if (palabraEncontrada) break
+            }
+            if (!palabraEncontrada) return false
+        }
+        return true
+    }
+
+    //Configuracion de la tabla utilizada con tanstack/react-Table
     const table = useReactTable({
         data: datos,
         columns,
@@ -65,7 +104,11 @@ const Oficinas = () => {
         getSortedRowModel: getSortedRowModel(),
         state: { sorting, globalFilter: filtering },
         onSortingChange: setSorting,
-        onGlobalFilteringChange: setFiltering
+        onGlobalFilteringChange: setFiltering,
+        globalFilterFn: (row, columnId, filterValue) => {
+            const filterLower = filterValue.toLowerCase().split(',')
+            return filtrarPorSecuencia(row, filterLower)
+        }
     })
 
     return (

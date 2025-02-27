@@ -18,6 +18,7 @@ const Empleados = () => {
     const [filtering, setFiltering] = useState("")
     const navigate = useNavigate()
 
+    //Verificar si se ha iniciado sesion y ademas obtener informacion de los empleados ingresados al sistema
     useEffect(() => {
         const fetchData = async () => {
             const storedUser = JSON.parse(sessionStorage.getItem("usuario"))
@@ -42,6 +43,7 @@ const Empleados = () => {
         fetchData()
     }, [])
 
+    //Aqui estan los headers de cada columna
     const columns = [
         {
             header: "Indice",
@@ -52,7 +54,7 @@ const Empleados = () => {
             accessorKey: 'rut',
             cell: (info) => { 
                 return user ? (
-                            <Link to={`/Empleado/${info.getValue()}`} title="Eliminar el empleado">
+                            <Link to={`/Usuario/${info.getValue()}`} title="Eliminar el empleado">
                                 {info.getValue()}
                             </Link>
                         )
@@ -88,6 +90,7 @@ const Empleados = () => {
         }
     ]
 
+    //Configuracion de la tabla utilizada con tanstack/react-Table
     const table = useReactTable({
         data: datos,
         columns,
@@ -97,17 +100,55 @@ const Empleados = () => {
         getFilteredRowModel: getFilteredRowModel(),
         state: { sorting, globalFilter: filtering },
         onSortingChange: setSorting,
-        onGlobalFilteringChange: setFiltering
+        onGlobalFilteringChange: setFiltering,
+        globalFilterFn: (row, columnId, filterValue) => {
+            const filterLower = filterValue.toLowerCase().split(',')
+            return filtrarPorSecuencia(row, filterLower)
+        }
     })
+
+    //Funcion para filtrar lo que escriba el usuario en el buscador global
+    const filtrarPorSecuencia = (row, filter) => {
+        if (!filter) return datos
+        //console.log(row,filter)
+        for (let letra of filter) {
+            if (!letra) break
+            let palabraEncontrada = false
+
+            for (let cell of row.getVisibleCells()) {
+
+                const cellValue = cell.getValue()?.toString().toLowerCase()
+                if (!cellValue) continue
+
+                let filterIndex = 0
+                for (let char of cellValue) {
+
+                    if (char === letra[filterIndex]) {
+                        filterIndex++
+                    } else {
+                        break
+                    }
+
+                    if (filterIndex === letra.length) {
+                        palabraEncontrada = true
+                        break
+                    }
+                }
+                if (palabraEncontrada) break
+            }
+            if (!palabraEncontrada) return false
+        }
+        return true
+    }
 
     return (
         <>
             <Encabezado />
             <Form>
                 <InputGroup>
-                    <InputGroup.Text>Buscador global</InputGroup.Text>
+                    <InputGroup.Text>Búscador global</InputGroup.Text>
                     <Form.Control
-                        placeholder="Ingresar valor para buscar"
+                        placeholder="Ingresar valór para buscar"
                         value={filtering}
                         onChange={(e) => setFiltering(e.target.value)}
                     />
@@ -153,28 +194,28 @@ const Empleados = () => {
                     <Col>
                         <Button onClick={() => table.setPageIndex(0)} disabled={!table.getCanPreviousPage()}>
                             <span>
-                                primera pagina
+                                primera página
                             </span>
                         </Button>
                     </Col>
                     <Col>
                         <Button onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
                             <span>
-                                pagina anterior
+                                página anterior
                             </span>
                         </Button>
                     </Col>
                     <Col>
                         <Button onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
                             <span>
-                                pagina siguiente
+                                página siguiente
                             </span>
                         </Button>
                     </Col>
                     <Col>
                         <Button onClick={() => table.setPageIndex(table.getPageCount() - 1)} disabled={!table.getCanNextPage()}>
                             <span>
-                                ultima pagina
+                                última página
                             </span>
                         </Button>
                     </Col>
@@ -183,12 +224,12 @@ const Empleados = () => {
                 <Row>
                     {user && (
                         <Button>
-                            <Link style={{ color: 'white' }} to="/agregarEmpleado" title="Agregar un empleado a la tabla">Agregar empleado</Link>
+                            <Link style={{ color: 'white' }} to="/agregarUsuario" title="Agregar un empleado a la tabla">Agregar Usuario</Link>
                         </Button>
                     )}
                 </Row>
                 <br />
-                <Button onClick={() => navigate(-1)}> Volver atras</Button>
+                <Button onClick={() => navigate(-1)}> Volver atrás</Button>
             </Container>
         </>
     )

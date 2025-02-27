@@ -16,6 +16,12 @@ const agregarOficina = () => {
 	const [dato, setDato] = useState({ oficina: '', pais: '' })
 	const navigate = useNavigate()
 
+	//Verificar si se ha iniciado sesion para ingresar a la pagina
+	useEffect(() => {
+		if (!sessionStorage.getItem("usuario")) navigate('/home')
+	}, [])
+
+	//Obtencion de los paises
 	useEffect(() => {
 		const fecthDatos = async () => {
 			const pais = await Servicio.paises()
@@ -25,6 +31,7 @@ const agregarOficina = () => {
 		fecthDatos()
 	}, [])
 
+	//Manejar paises para seleccion
 	useEffect(() => {
 		if (pais) {
 			const valores = pais.map(item => ({
@@ -36,6 +43,7 @@ const agregarOficina = () => {
 		}
 	}, [pais])
 
+	//Estilos de seleccion
 	const customStyles = {
 		control: (provided) => ({
 			...provided,
@@ -47,6 +55,7 @@ const agregarOficina = () => {
 		option: (provided) => ({ ...provided, color: "black" }),
 	}
 
+	//Subir informacion ingresada a la base de datos
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		if (dato.oficina === '' && dato.pais === '') {

@@ -6,7 +6,7 @@ const baseUrl = "http://172.20.2.5:8080"
 const verEquipos = async () => {
     try {
         const respuesta = await axios.get(`${baseUrl}/verEquipos`)
-        console.log(respuesta.data)
+        console.log(respuesta)
         return respuesta
     } catch (error) {
         console.error('error en la peticion', error)
@@ -143,6 +143,7 @@ const creacionEquipo = async () => {
 const subirTabla = async info => {
     try {
         const respuesta = await axios.post(`${baseUrl}/subirTabla`, info, { header: { 'content-type': 'application/json' } })
+        return respuesta
         consle.log(respuesta)
     } catch (error) {
         console.error("Hubo un error en la solicitud", error)
@@ -369,6 +370,16 @@ const actualizarOficina = async info => {
         console.error("Hubo un error al actualizar la informacion", error)
     }
 }
+const eliminarOficina = async info => {
+    console.log(info)
+    try { 
+        const respuesta = await axios.post(`${baseUrl}/eliminarOficina`, info)
+        return respuesta
+        console.log(respuesta)
+    } catch (error) {
+        console.error("Hubo un error al actualizar la informacion", error)
+    }
+}
 
 export default {
     registro,
@@ -405,5 +416,6 @@ export default {
     agregarOficina,
     oficinaUnica,
     actualizarOficina,
-    documentoFirmado
+    documentoFirmado,
+    eliminarOficina
 }

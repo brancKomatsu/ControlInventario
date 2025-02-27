@@ -1,9 +1,10 @@
-import Form from 'react-bootstrap/Form'
+锘縤mport Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Servicio from '../Servicios/Servicio.js'
+import Encabezado from '../components/Encabezado'
 
 
 const Registro = () => {
@@ -12,41 +13,47 @@ const Registro = () => {
     const [id, setId] = useState("")
     const [error, setError] = useState(false)
     const [user, setUser] = useState({})
-    let navigate = useNavigate()
 
+    const navigate = useNavigate()
+
+    //Funcion para validar que se ingresaron bien los datos
     const validarDatos = () => {
-
-        if (contrasena === "" || correo === "" || id !== "12345") {
-            setError(true)
-            window.alert("Todos los campos son obligatorios")
-            return false
-        } else {
+        console.log(contrasena, correo, id)
+        if (contrasena === "" || correo === "" || id === "") {
             setError(false)
+            window.alert("Todos los campos son obligatorios")
             return true
+        } else if (id !== "12345") {
+            setError(false)
+            window.alert("El ID de verificacion no es correcto")
+            return true
+        } else {
+            setError(true)
+            return false
         }
 
     }
 
+    //Funcion para subir registro a la bsae de datos
     const Registros = async (e) => {
         e.preventDefault()
 
-        if (!validarDatos()) return
+        if (validarDatos()) return
 
         try { 
             const usuario = await Servicio.registro({ correo, contrasena })
-            console.log(usuario)
             if (usuario !== null) {
 
                 setUser(usuario)
                 sessionStorage.setItem("usuario", JSON.stringify(usuario))
                 console.log("Registro realizado con exito")
-                navigate('/home')
+                navigate(-1)
 
             } else {
-                window.alert("Correo electronico ya existe")
+                window.alert("Correo electr贸nico ya existe")
             }
         } catch (e) {
-            console.error("Hubo un error en la conexion", e)
+            console.error("Hubo un error en la conexi贸n", e)
         }
     }
 
@@ -54,39 +61,40 @@ const Registro = () => {
 
     return (
         <>
+            <Encabezado />
             <Card style={{ width: '20rem' }}>
                 <Card.Title> Komatsu</Card.Title>
                 <Card.Body>
                     <Form onSubmit={Registros}>
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Correo electronico</Form.Label>
+                            <Form.Label>Correo electr贸nico</Form.Label>
                             <Form.Control
                                 value={correo}
                                 type="email"
-                                placeholder="Correo electronico"
+                                placeholder="Correo electr贸nico"
                                 onChange={(e) => setCorreo(e.target.value)}
                             >
                             </Form.Control>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Contrasena</Form.Label>
+                            <Form.Label>Contrase帽a</Form.Label>
                             <Form.Control
                                 value={contrasena}
                                 type="password"
-                                placeholder="Contrasena"
+                                placeholder="Contrase帽a"
                                 onChange={(e) => setContrasena(e.target.value)}
                             >
                             </Form.Control>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>ID Verificaci髇</Form.Label>
+                            <Form.Label>ID Verificaci贸n</Form.Label>
                             <Form.Control
                                 value={id}
                                 type="text"
-                                placeholder="Id Verificaci髇"
+                                placeholder="Id Verificaci贸n"
                                 onChange={(e) => setId(e.target.value)}
                             >
                             </Form.Control>

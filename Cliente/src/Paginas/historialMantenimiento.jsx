@@ -16,9 +16,9 @@ const historialMantenimiento = () => {
     const [sorting, setSorting] = useState([])
     const [filtering, setFiltering] = useState("")
     const asset = useParams().asset
-    console.log(asset)
     const navigate = useNavigate() 
 
+    //Conseguir el historial de manteniento de asset
     useEffect(() => {
         const fetchDatos = async () => {
             try {
@@ -31,6 +31,7 @@ const historialMantenimiento = () => {
         fetchDatos()
     }, [])
 
+    //Aqui estan los headers de cada columna
     const columns = [
         {
             header: "Indice",
@@ -59,6 +60,7 @@ const historialMantenimiento = () => {
         }
     ]
 
+    //Configuracion de la tabla utilizada con tanstack/react-Table
     const table = useReactTable({
         data: datos,
         columns,
@@ -71,7 +73,6 @@ const historialMantenimiento = () => {
         onGlobalFilteringChange: setFiltering
     })
 
-    console.log(datos)
     return (
         <>
             <Encabezado />

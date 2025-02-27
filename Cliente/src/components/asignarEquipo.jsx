@@ -7,17 +7,25 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import Button from 'react-bootstrap/Button'
 import Select from 'react-select'
 import InputGroup from 'react-bootstrap/InputGroup'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const asignarEquipo = () => {
     const [accion, setAccion] = useState()
     const asset = useParams()
+    const navigate = useNavigate()
 
+    //Verificar si se ha inciaado sesion para ingresar a la pagina
+    useEffect(() => {
+        if (!sessionStorage.getItem("usuario")) navigate('/home')
+    }, [])
+
+    //Aqui se maneja la asignacion del equipo
     const AccionPersona = () => {
         const [persona, setPersona] = useState()
         const [options, setOptions] = useState({})
         const [valor, setValor] = useState({})
 
+        //Conseguir los nombres de los usuarios exitentes
         useEffect(() => {
             const fetchData = async () => {
                 const respuesta = await Servicio.nombreApellido()
@@ -27,6 +35,7 @@ const asignarEquipo = () => {
             fetchData()
         }, [])
 
+        //Manejo de la informacion persona para mostrar en seleccion
         useEffect(() => {
             if (persona) {
                 const valores = persona.map(item => ({
@@ -40,7 +49,8 @@ const asignarEquipo = () => {
                 console.log(options)
             }
         }, [persona])
-        
+
+        //Estilos de seleccion
         const customStyles = {
             control: (provided) => ({
                 ...provided,
@@ -54,6 +64,7 @@ const asignarEquipo = () => {
 
         console.log(valor)
 
+        //Funcion para subir la informacion
         const handleSubmit = async (e) => {
             e.preventDefault()
             if (valor.nombre === undefined) {
@@ -82,9 +93,10 @@ const asignarEquipo = () => {
         )
     }
 
+    //Aqui se maneja la accion de crear mantenimiento
     const AccionMantenimiento = () => {
         const [texto, setTexto] = useState({texto: "", asset:asset.asset})
-
+        //Funcion para subir la informacion a base de datos
         const handleSubmit = async (e) => {
             console.log(texto)
             if (texto.texto === "") {

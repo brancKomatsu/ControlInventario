@@ -1,14 +1,18 @@
-import Nav from 'react-bootstrap/Nav'
+﻿import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import Persona from '../../Images/Persona.svg'
 
 const Encabezado = () => {
     const [user, setUser] = useState(null)
+    const navigate = useNavigate()
 
+    //Verificar si se ha inciado sesion
     useEffect(() => {
         const storedUser = JSON.parse(sessionStorage.getItem("usuario"))
         if (storedUser) {
@@ -18,9 +22,18 @@ const Encabezado = () => {
         }
     }, [])
 
+    //Manejo para cerrar sesino
+    const cerrarSesion = () => {
+        setUser(false)
+        sessionStorage.removeItem("usuario")
+        if (window.location.pathname === '/CreacionEquipo') navigate('/home')
+        if (window.location.pathname === '/agregarUsuario') navigate('/Usuarios')
+        if (location.pathname.startsWith('/Usuario/')) navigate('/Usuarios')
+        window.location.reload()
+    }
+
     //Esta parte del codigo es para revisar si se ha iniciado sesion
     const SesionIniciada = () => {
-        console.log(user)
 
         if (user) {
             const usuario = user[0].correo_electronico.split("@")
@@ -29,12 +42,13 @@ const Encabezado = () => {
                 <>
                     <span className="text-white d-flex align-items-center">
                         {usuario[0]}
-                        <Image src="../Images/Persona.svg" width={25} height={25} roundedCircle className="ms-2"/>
+                        <Image src={Persona} width={25} height={25} roundedCircle className="ms-2"/>
                     </span>
                     <NavDropdown title="Adicionales" id="navbarScrollingDropdown">
                         <NavDropdown.Item as={Link} to="/Lac">LAC</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="/Oficinas">Oficinas</NavDropdown.Item>
                     </NavDropdown>
+                    <Button variant='' onClick={cerrarSesion}>Cerrar sesión</Button>
                 </>
             )
         } else {
@@ -42,10 +56,10 @@ const Encabezado = () => {
             return (
                 <>
                     <Nav.Link className="align-items-center" as={Link} to="/iniciarsesion">
-                        Iniciar Sesion
+                        Iniciar Sesión
                     </Nav.Link>
                     <Nav.Link as={Link} to="/iniciarsesion"> 
-                        <Image className="align-items-center" src="../Images/Persona.svg" width={25} height={25} roundedCircle/>
+                        <Image className="align-items-center" src={Persona} width={25} height={25} roundedCircle/>
                     </Nav.Link>
                 </>
             )
@@ -57,13 +71,13 @@ const Encabezado = () => {
             <Navbar fixed="top" expand="lg" bg="primary" data-bs-theme="dark" className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand as={Link} to="/home"> Komatsu </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-var" />
-                    <Navbar.Collapse id="responsive-navbar-var" />
                     <Nav>
                         <SesionIniciada />
                     </Nav>
                 </Container>
             </Navbar>
+            <br/>
+            <br/>
         </>
     )
 }

@@ -13,6 +13,7 @@ const modificarEquipo = () => {
     const asset = useParams().asset
     const navigate = useNavigate()
 
+    //Conseguir las columnas de caracteristicas
     useEffect(() => {
         const fetchDatos = async () => {
             try {
@@ -27,6 +28,7 @@ const modificarEquipo = () => {
 
     console.log("El asset es: ", asset)
 
+    //Manejar el cambio de los valores ingresados
     const handleChange = (key, value) => {
         setDatos(prev => ({
             ...prev,
@@ -35,6 +37,7 @@ const modificarEquipo = () => {
     }
     console.log("Los valores actuales son: ", datos)
 
+    //Manejar el subir la informacion a la base de datos
     const handleSubmit = async (e) => {
         const nuevoDato = {
             ...datos,
@@ -49,6 +52,7 @@ const modificarEquipo = () => {
         }
     }
 
+    //Funcion para eliminar equipo
     const EliminarEquipo = async (e) => {
         e.preventDefault()
         const confirmacion = window.confirm("¿Estas seguro de eliminar el equipo?")

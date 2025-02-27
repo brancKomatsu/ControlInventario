@@ -18,6 +18,12 @@ const actualizarOficina = () => {
 	const [oficina, setOficina] = useState({id_oficina:id_oficina})
 	console.log(id_oficina)
 
+	//Verificar si se ha iniciado sesion para ingresar a la pagina
+	useEffect(() => {
+		if (!sessionStorage.getItem("usuario")) navigate('/home')
+	}, [])
+
+	//Obtener los nombres de los paises
 	useEffect(() => {
 		const fecthDatos = async () => {
 			const pais = await Servicio.paises()
@@ -26,6 +32,8 @@ const actualizarOficina = () => {
 		}
 		fecthDatos()
 	}, [])
+
+	//Manejar paises para seleccion
 	useEffect(() => {
 		if (pais) {
 			const valores = pais.map(item => ({
@@ -36,6 +44,8 @@ const actualizarOficina = () => {
 			//console.log(options)
 		}
 	}, [pais])
+
+	//Estilo de seleccion
 	const customStyles = {
 		control: (provided) => ({
 			...provided,
@@ -47,6 +57,7 @@ const actualizarOficina = () => {
 		option: (provided) => ({ ...provided, color: "black" }),
 	}
 
+	//Obtener los datos de la oficina con el asset
 	useEffect(() => {
 		const fecthDatos = async () => {
 			const datoOficina = await Servicio.oficinaUnica(id_oficina)
@@ -56,6 +67,7 @@ const actualizarOficina = () => {
 		fecthDatos()
 	}, [])
 
+	//Manejar subir la informacion a la base de datos
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		console.log(oficina)
@@ -68,9 +80,19 @@ const actualizarOficina = () => {
 		}
 	}
 
+	//Funcion para eliminar el equipo
 	const eliminar = async (e) => {
-		console.log("ELiminar")
+		e.preventDefault()
+		console.log(id_oficina)
+		try {
+			const respuesta = await Servicio.eliminarOficina({ id_oficina: id_oficina })
+			console.log(respuesta)
+			respuesta ? navigate('/Oficinas') : null
+		} catch (error) {
+			console.error("Hubo un error al actualizar la informacion", error)
+		}
 	}
+
 	return (
 		<>
 			<Encabezado />

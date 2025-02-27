@@ -13,6 +13,12 @@ const AgregarLac = () => {
 	const [lac, setLac] = useState({ lac: '' })
 	const navigate = useNavigate()
 
+	//Verificar si se ha iniciado sesion para ingresar a la pagina
+	useEffect(() => {
+		if (!sessionStorage.getItem("usuario")) navigate('/home')
+	}, [])
+
+	//Subir la informacin a la base de datos
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {

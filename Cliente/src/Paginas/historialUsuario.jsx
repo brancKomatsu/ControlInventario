@@ -17,8 +17,8 @@ const historialUsuarios = () => {
     const [filtering, setFiltering] = useState("")
     const asset = useParams().asset
     const navigate = useNavigate() 
-    console.log(asset)
 
+    //Conseguir los datos de los usuarios que ha usado el dispositivo de asset
     useEffect(() => {
         const fetchDatos = async () => {
             try {
@@ -31,6 +31,7 @@ const historialUsuarios = () => {
         fetchDatos()
     }, [])
 
+    //Aqui estan los headers de cada columna
     const columns = [
         {
             header: "Indice",
@@ -63,6 +64,7 @@ const historialUsuarios = () => {
         }
     ]
 
+    //Configuracion de la tabla utilizada con tanstack/react-Table
     const table = useReactTable({
         data: datos,
         columns,
@@ -75,7 +77,6 @@ const historialUsuarios = () => {
         onGlobalFilteringChange: setFiltering
     })
 
-    console.log(datos)
     return (
         <div className="mt-5">
             <Encabezado />

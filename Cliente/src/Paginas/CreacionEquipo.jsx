@@ -1,4 +1,4 @@
-import Encabezado from "../components/Encabezado"
+﻿import Encabezado from "../components/Encabezado"
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Card from 'react-bootstrap/Card'
@@ -16,6 +16,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
     const [options, setOptions] = useState({})
     const [lac, setLac] = useState()
 
+    //Estilos de seleccion
     const customStyles = {
         control: (provided) => ({
             ...provided,
@@ -27,6 +28,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
         option: (provided) => ({ ...provided, color: "black" }),
     }
 
+    //Obtener informacion de los Lac para seleccion
     useEffect(() => {
         const fecthDatos = async () => {
             const lac = await Servicio.lac()
@@ -36,6 +38,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
         fecthDatos()
     }, [])
 
+    //Manejo de los lac para seleccion
     useEffect(() => {
         if (lac) {
             console.log("EL lac es: ", lac)
@@ -48,6 +51,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
         }
     }, [lac])
 
+    //Manjeo de los valores ingresados
     const handleChange = (columnas, index, value) => {
         setValores((prev) => {
             const valoresNuevos = [...prev]
@@ -56,6 +60,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
         })
     }
 
+    //Permitir que solo se esten ingresando numeros
     const handleNumber = (e) => {
         if (!/[0-9]/.test(e.key) && e.key !== "Backspace" && e.key !== "Delete") {
             e.preventDefault()
@@ -68,6 +73,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
                 <InputGroup.Text> Service tag </InputGroup.Text>
                 <Form.Control
                     value={service}
+                    placeholder='Ingrese hasta 10 letras'
                     onChange={(e) => setService(e.target.value)}
                 />
             </InputGroup>
@@ -75,6 +81,7 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
                 <InputGroup.Text> Asset </InputGroup.Text>
                 <Form.Control
                     value={asset}
+                    placeholder="Ingrese solamente números"
                     onChange={(e) => setAsset(e.target.value)}
                     onKeyDown={handleNumber}
                 />
@@ -102,6 +109,12 @@ const CreacionDato = ({ columnas, valores, setValores, asset, setAsset, service,
 const CreacionEquipo = () => {
     const [tabla, setTabla] = useState(false) //si es true muestra el form para crear una tabla, en caso contrario no muestra nada
     const navigate = useNavigate()
+
+    //Verificar si el usuario a iniciado sesion para ingresar a la pagina
+    useEffect(() => {
+        console.log("No puedes", )
+        if (!sessionStorage.getItem("usuario")) navigate('/home')
+    }, [])
 
     //para mostrar los nombres de las tablas en el dropdown
     const [categorias, setCategorias] = useState()
@@ -133,7 +146,6 @@ const CreacionEquipo = () => {
     const [asset, setAsset] = useState() //valor del asset
     const [service, setService] = useState() // valor del service tag
     const [valorLac, setvalorLac] = useState()
-    const fecha = dayjs()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -147,7 +159,6 @@ const CreacionEquipo = () => {
             nombre_tabla:nombre_tabla,
             asset: asset,
             service: service,
-            fecha_creacion: fecha.format('YYYY-MM-DD'),
             lac: valorLac,
             valores
         }

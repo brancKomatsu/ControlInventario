@@ -1,17 +1,19 @@
-import Form from 'react-bootstrap/Form'
+﻿import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Servicio from '../Servicios/Servicio'
+import Encabezado from '../components/Encabezado'
 
 const IniciarSesion = () => {
     const [correo, setCorreo] = useState("")
     const [contrasena, setContrasena] = useState("")
     const [error, setError] = useState(false)
     const [user, setUser] = useState()
-    let navigate = useNavigate()
+    const navigate = useNavigate()
 
+    //Funcion par verificar que todos los datos hayan sido ingresadps
     const validarDatos = () => {
 
         if (contrasena === "" || correo === "") {
@@ -25,6 +27,7 @@ const IniciarSesion = () => {
 
     }
 
+    //Logica para iniciar sesion
     const Logeo = async (e) => {
         e.preventDefault()
 
@@ -35,8 +38,8 @@ const IniciarSesion = () => {
             if (usuario.length !== 0) {
                 setUser(usuario)
                 sessionStorage.setItem("usuario", JSON.stringify(usuario))
-                console.log("Inicio de sesion realizado con exito")
-                navigate('/home')   
+                console.log("Inicio de sesion realizado con éxito")
+                navigate(-1)   
             } else {
                 window.alert("Valores incorrectos o no existe cuenta, intente de nuevo")
                 console.log("credenciales incorrectas o no no existe la cuenta")
@@ -48,31 +51,32 @@ const IniciarSesion = () => {
 
     return (
         <>
+            <Encabezado />
             <Card style={{ width: '20rem' }}>
                 <Card.Title> Komatsu</Card.Title>
                 <Card.Body>
                     <Form onSubmit={Logeo}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Correo electronico</Form.Label>
+                            <Form.Label>Correo electrónico</Form.Label>
                             <Form.Control
                                 value={correo}
                                 type="email"
-                                placeholder="Correo electronico"
+                                placeholder="Correo electrónico"
                                 onChange={(e) => setCorreo(e.target.value) }
                             >
                             </Form.Control>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Contrasena</Form.Label>
+                            <Form.Label>Contraseña</Form.Label>
                             <Form.Control
                                 value={contrasena}
                                 type="password"
-                                placeholder="Contrasena"
+                                placeholder="Contraseña"
                                 onChange={ (e) => setContrasena(e.target.value) }
                             >
                             </Form.Control>
                         </Form.Group>
-                        <Button variant="primary" type="submit"> Iniciar sesion</Button>
+                        <Button variant="primary" type="submit"> Iniciar sesión</Button>
                         {error && <p> Todos los cambios son obligatorios </p>}
                         <div className="mt-3 text-start">
                             <Link to="/Registro"> Crear usuario </Link>

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Encabezado from '../components/Encabezado'
 import Servicio from '../Servicios/Servicio'
 import Row from 'react-bootstrap/Row'
@@ -17,6 +17,12 @@ const EditarLac = () => {
 	const navigate = useNavigate()
 	console.log(eliminar)
 
+	//Verificar si se ha iniciado sesion al ingresar a la pagina
+	useEffect(() => {
+		if (!sessionStorage.getItem("usuario")) navigate('/home')
+	}, [])
+
+	//Manejar la eliminacion del Lac
 	const eliminarLac = async (e) => {
 		e.preventDefault()
 		if (window.confirm("¿Estas seguro que quieres eliminar el Lac? \n Esto desactivara los equipos y empleados relacionados a este Lac")) {
@@ -28,8 +34,13 @@ const EditarLac = () => {
 		}
 	}
 
+	//Manejo del cambio de informacion del Lac
 	const handleSubmit = async (e) => {
 		e.preventDefault()
+		if (valor.nuevo.length > 10) {
+			window.alert("El nombre de Lac tiene que ser menor a 10 caracteres")
+			return
+		}
 		if (valor.nuevo === "") {
 			window.alert("Es necesario agregar un nuevo valor")
 			return
@@ -61,7 +72,7 @@ const EditarLac = () => {
 							<InputGroup.Text>Nombre Lac</InputGroup.Text>
 							<Form.Control
 								value={valor.nuevo}
-								placeholder="Ingrese nuevo nombre de Lac"
+								placeholder="Ingresar menos de 10 letras"
 								onChange={(e) => { setValor(prev => ({ ...prev, nuevo: e.target.value })) }}
 							/>
 						</InputGroup>

@@ -52,6 +52,7 @@ const Equipos = () => {
         }
     }, [info]);
 
+    //Manejar las fechas de informacion para obtener informacionValida que tiene todos los datos correctos
     useEffect(() => {
         if (informacion && informacion.length > 0) {
             const informacion_procesada = Object.entries(informacion[0]).map(([key, value]) => {
@@ -65,11 +66,13 @@ const Equipos = () => {
         }
     }, [informacion]);
 
+    //Conseguir si el equipo se esta usando por el nombre del usuario
     useEffect(() => {
         if (informacionValida && informacionValida.length > 7) {
             setenUso(`${informacionValida[6].value}`);
         }
     }, [informacionValida]);
+
     if (enUso) {
         console.log(enUso)
     }
@@ -91,13 +94,17 @@ const Equipos = () => {
         if (!informacionValida) return null
         if (!caracteristicas) return null
 
-        const [file, setFile] = useState()
+        const [file, setFile] = useState(false)
         const [cambiarFirmado, setCambiarFirmado] = useState(false)
         const url = `http://172.20.2.5:8080/descargarArchivo/${informacionValida[0].value}`
+
+        //Verificar que hay archivo para actualizar file y que se pueda descargar
         if (informacionValida && informacionValida[11]?.value && !file) {
             setFile(informacionValida[11].value.data)
+            console.log("file actualizado", file)
         }
-        
+
+        //Manejar el archivo file para subir un archivo
         const handleChange = async (e) => {
             e.preventDefault()
             const newFile = e.target.files[0]
@@ -113,11 +120,9 @@ const Equipos = () => {
             }
         }
 
-        console.log("informacionValida: ", informacionValida)
-        console.log("caracteristicas: ", caracteristicas)
         return (
             <>
-                <Form>
+                <Form className="w-100">
                     <br/>
                     {
                         Object.entries(caracteristicas).map(([key, value]) => (
@@ -154,50 +159,94 @@ const Equipos = () => {
                             }
 
                             if (informacionValida[index].key === "apellido") return null
+                            if (informacionValida[index].key === "eliminacion de equipo") {
+                                if (item.value === 'Invalid Date') {
+                                    return (
+                                        <>
+                                            <InputGroup key={index}>
+                                                <InputGroup.Text>{item.key}</InputGroup.Text>
+                                                <Form.Control
+                                                    placeholder=""
+                                                    disabled
+                                                />
+                                            </InputGroup>
+                                            <br />
+                                        </>
+                                    )
+                                }
+                            }
 
                             if (item.key === "Documento firmado") {
                                 return (
                                     <>
-                                        <InputGroup>
+                                        <InputGroup className="align-items-center">
                                             <InputGroup.Text>Documento firmado</InputGroup.Text>
                                             {
-                                                getUsuario && informacionValida[1].value !== '' ?
+                                                getUsuario ?
                                                     <>
                                                         {
                                                             !file || cambiarFirmado ?
-                                                                <Form.Control
-                                                                    type="file"
-                                                                    disabled={!cambiarFirmado}
-                                                                    onChange={handleChange}
-                                                                    className="mb-2"
-                                                                />
+                                                                <>
+                                                                    {
+                                                                        informacionValida[1].value !== '' ?
+                                                                            <>
+                                                                                <Form.Group controlId="formFile"> 
+                                                                                    <Form.Control
+                                                                                        type="file"
+                                                                                        disabled={!cambiarFirmado}
+                                                                                        onChange={handleChange}
+                                                                                    />
+                                                                                </Form.Group>
+                                                                                <Form.Check
+                                                                                    type="checkbox"
+                                                                                    className="p-2 mt-2"
+                                                                                    data-tooltip-id="id-tooltip"
+                                                                                    data-tooltip-content="Cambiar archivo"
+                                                                                    bg="dark"
+                                                                                    onClick={() => setCambiarFirmado(!cambiarFirmado)}
+                                                                                />
+                                                                            </>
+                                                                            :
+                                                                            <Form.Control 
+                                                                                value=''
+                                                                                disabled
+                                                                            />
+
+                                                                    }
+                                                                </>
                                                                 :
-                                                                <Form.Text className="text-muted">
-                                                                        <div className="d-flex align-items-center">
-                                                                        <Button as="a" href={url} download variant="outline-secondary" className="m-2 p-2">Documento_{informacionValida[1].value}_{informacionValida[2].value}</Button>
-                                                                        </div>
-                                                                </Form.Text>
+                                                                <> 
+                                                                    <Form.Control as="div" className="form-control text-muted">
+                                                                        <Link to={url} download className="w-100"> Descargar documento </Link>
+                                                                    </Form.Control>
+                                                                    <Form.Check
+                                                                        type="checkbox"
+                                                                        className="p-2 mt-2"
+                                                                        data-tooltip-id="id-tooltip"
+                                                                        data-tooltip-content="Cambiar archivo"
+                                                                        bg="dark"
+                                                                        onClick={() => setCambiarFirmado(!cambiarFirmado)}
+                                                                    />
+                                                                </>
                                                         }
-                                                        <Form.Check
-                                                            type="checkbox"
-                                                            className="p-2 mt-2"
-                                                            data-tooltip-id="id-tooltip"
-                                                            data-tooltip-content="Cambiar archivo"
-                                                            onClick={() => setCambiarFirmado(!cambiarFirmado)}
-                                                        />
                                                         <Tooltip id="id-tooltip" place="top" type="dark" effect="solid" />
                                                     </>
-                                                    :
-                                                    <Form.Text className="text-muted border">
-                                                        {
-                                                            file ? 
-                                                                <div className="d-flex align-items-center">
-                                                                    <Button as="a" href={url} download variant="outline-secondary" className="m-2 p-2">Documento_{informacionValida[1].value}</Button>
-                                                                </div>
-                                                                :
-                                                                "No hay archivo actualmente"
-                                                        }
-                                                    </Form.Text>
+                                                    : (
+                                                        <>
+                                                            {
+                                                                informacionValida[1].value !== null ?
+                                                                    <Form.Control as="div" className="form-control text-muted">
+                                                                        <span> No hay documento </span>
+                                                                    </Form.Control>
+                                                                    :
+                                                                    <Form.Control as="div" className="form-control text-muted">
+                                                                        <Link to={url} download className="w-100"> Descargar documento </Link>
+                                                                    </Form.Control>
+                                                            }
+                                                            
+                                                        </>
+                                                    )
+
                                             }
                                         </InputGroup>
                                         <br />
@@ -226,7 +275,7 @@ const Equipos = () => {
     return (
         <div className="mt-5">
             < Encabezado />
-            <Card style={{ width: "550px" }}>
+            <Card style={{ width: "675px" }}>
                 <Card.Header className="border rounded">
                     <Row className="align-items-center">
                         <Col>

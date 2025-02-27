@@ -9,12 +9,25 @@ const storage = multer.memoryStorage()
 const upload = multer({storage: storage})
 //<-------------- verEquipos ----------------->
 router.get('/verEquipos', async (req, res) => {
-	const pool = await getConnection()
+    const pool = await getConnection()
 
-    const resultado = await pool.request().query('select * from Informacion_equipos')
-    console.log(resultado.recordset)
+    const tablas = await pool.request()
+        .query('select t1.nombre_tabla from categorias as t1 join equipos as t2 on t1.id_categoria=t2.categoria group by nombre_tabla')
+    const nombre_tablas = tablas.recordset.map((item, index) => {
+        return item.nombre_tabla
+    })
+    console.log(nombre_tablas)
 
-	res.json(resultado.recordset)
+    const consulta = await Promise.all(nombre_tablas.map( async item => {
+        const result = await pool.request().query(`select t2.*, t1.* from ${item} as t1 join Informacion_equipos as t2 on t1.id_service_tag=t2.[Service tag]`)
+        return result.recordset
+    }))
+    console.log(consulta)
+
+    //const resultado = await pool.request().query('select * from Informacion_equipos')
+    //console.log(resultado.recordset)
+
+	res.json(consulta)
 })
 //--> Nombre categorias
 router.get("/categorias", async (req, res) => {
@@ -36,7 +49,7 @@ router.get("/tablaCategorias/:categoria", async (req, res) => {
     try {
         const respuesta = await pool.request()
             .input('categoria', sql.VarChar, categoria)
-            .query(`select t1.*, t2.* from tabla_Categoria as t1 join ${categoria} as t2 on t1.service_tag=t2.id_service_tag where t1.tabla=@categoria`)
+            .query(`select t1.*, t2.* from tabla_Categoria as t1 join ${categoria} as t2 on t1.[Service tag]=t2.id_service_tag where t1.Categoria=@categoria`)
         console.log(respuesta.recordset)
         res.send(respuesta.recordset)
     } catch (error) {
@@ -260,6 +273,13 @@ router.post('/subirTabla', async (req, res) => {
     const query = info.columnas.map(dato => `[${dato.nombre}] ${dato.tipo}`).join(", ")
     console.log(query)
 
+    const respuesta = await pool.request().query(`select * from categorias where nombre_tabla='${nombre_tabla}'`)
+    if (respuesta.recordset.length > 0) {
+        console.log("La categoria ya existe")
+        res.status(404).send("La categoria ya existe")
+        return
+    }
+
     try {
         const categoria = await pool.request()
             .query(`insert into categorias (nombre_tabla) values('${nombre_tabla}')`)
@@ -271,6 +291,7 @@ router.post('/subirTabla', async (req, res) => {
     try {
         const nuevaTabla = await pool.request()
             .query(`create table ${nombre_tabla} (id_service_tag varChar(10), ${query}, foreign key (id_service_tag) references equipos(service_tag))`)
+        res.send("Se creo la tabla")
         console.log("nueva tabla creada", nuevaTabla)
     } catch (error) {
         console.error("Hubo error al crear tabla", error)
@@ -286,16 +307,16 @@ router.post("/subirEquipo", async (req, res) => {
     const lac = info.lac
     const nombre_columnas = info.valores.map(item => `[${Object.keys(item)[0]}]`).join(',')
     const valores = info.valores.map(item => `'${Object.values(item)[0]}'`).join(',')
-    const fecha = info.fecha_creacion 
-    console.log(info,nombre_tabla, asset, service, nombre_columnas, valores, lac)
-
+    const fecha = dayjs().format('YYYY-MM-DD') 
+    console.log(info, nombre_tabla, asset, service, nombre_columnas, valores, lac, fecha)
+    
     //crear el dato en tabla movimientos
     try {
         const movimientos = await pool.request()
             .input('asset', sql.Int, asset)
             .input('fecha', sql.Date, fecha)
             .query(`insert into movimientos (asset, rut_persona, ultima_modificacion, estado) values (@asset, 0, @fecha, 2)`)
-        console.log("movimientos: ", movimientos)
+        console.log("movimientos: ", movimientos.recordset[0])
     } catch (error) {
         console.error("Hubo un error en la insercion de datos de la primary key", error)
         res.send("asset ya existe")
@@ -316,7 +337,7 @@ router.post("/subirEquipo", async (req, res) => {
             .query(`insert into equipos (service_tag, categoria, asset_equipo, creacion_equipo, lac) values (@service, (select id_categoria from categorias where nombre_tabla=@nombre_tabla) , @asset, @fecha, @lac)`)
         console.log("equipos: ", equipos)
     } catch (error) {
-        console.error("Hubo un error en la insercion de datos en equipos")
+        console.error("Hubo un error en la insercion de datos en equipos", error)
 
         const equipos = await pool.request()
             .input('asset', sql.Int, asset)
@@ -644,7 +665,7 @@ router.post("/eliminarEquipo", async (req, res) => {
         const respuesta = await pool.request()
             .input('asset', sql.Int, info.asset)
             .input('fecha', sql.Date, fecha)
-            .query(`update movimientos set rut_persona=0, ultima_modificacion=@fecha, ubicacion=9, estado=3, alias='' where asset=@asset`)
+            .query(`update movimientos set rut_persona=0, ultima_modificacion=@fecha, estado=3, alias='' where asset=@asset`)
         console.log(respuesta)
         res.send(respuesta)
     } catch (error) {
@@ -842,6 +863,32 @@ router.post('/actualizarOficina', async (req, res) => {
     } catch (error) {
         console.error("Hubo un error al actualizar la oficina", error)
     }
+})
+//--> Eliminar oficina
+router.post('/eliminarOficina', async (req, res) => {
+    const pool = await getConnection()
+    const id = req.body.id_oficina
+    console.log(id)
+    
+    try {
+        const respuesta = await pool.request()
+            .input('id', sql.Int, id)
+            .query(`update empleados set oficina_id=1 where oficina_id=@id`)
+        console.log(respuesta)
+    } catch (error) {
+        console.error("Hubo un error en actualizar empleados", error)
+    }
+
+    try {
+        const respuesta = await pool.request()
+            .input('id', sql.Int, id)
+            .query(`delete from oficina where id_oficina=@id`)
+        res.send(respuesta)
+        console.log(respuesta)
+    } catch (error) {
+        console.error("Hubo un error en eliminar oficina", error)
+    }
+    
 })
 
 export default router

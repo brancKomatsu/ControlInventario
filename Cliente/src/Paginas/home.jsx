@@ -9,13 +9,17 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const paginaPrincipal = () => {
-    const [user, setUser] = useState()
+
+    const [user, setUser] = useState() // Variable para verificar si se ha iniciado sesión
+
+    //Función para conseguir si el usuari ha iniciado sesión
     useEffect(() => {
         const storedUser = JSON.parse(sessionStorage.getItem("usuario"))
         if (storedUser) {
             setUser(storedUser)
         }
-    },[])
+    }, [])
+
     return (
         <>
             <Encabezado />
@@ -34,7 +38,7 @@ const paginaPrincipal = () => {
                             null
                     }
                     <Col xs={4}>
-                        <Button as={Link} to="/Empleados" title="Tabla con los empleados" className="w-100"> Usuarios </Button>
+                        <Button as={Link} to="/Usuarios" title="Tabla con los empleados" className="w-100"> Usuarios </Button>
                     </Col>
                 </Row>
             </Card>

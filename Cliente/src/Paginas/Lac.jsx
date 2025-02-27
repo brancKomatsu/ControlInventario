@@ -15,15 +15,19 @@ const Lac = () => {
     const [sorting, setSorting] = useState([])
     const [datos, setDatos] = useState([])
     const [filtering, setFiltering] = useState("")
-    const [idLac, setidLac] = useState()
     const navigate = useNavigate()
 
+    //Verificar que al ingresar a la pagina se haya iniciado sesion
+    useEffect(() => {
+        if (!sessionStorage.getItem("usuario")) navigate('/home')
+    }, [])
+
+    //Conseguir datos de los Lac existentes
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const respuesta = await Servicio.lac()
                 setDatos(respuesta)
-                setidLac(respuesta.id_lac)
                 console.log(respuesta)
             } catch (error) {
                 console.error("errros al cargar los datos", error)
@@ -32,6 +36,7 @@ const Lac = () => {
         fetchData()
     },[])
 
+    //Aqui estan los headers de cada columna
     const columns = [
         {
             header: "Id Lac",
@@ -51,6 +56,7 @@ const Lac = () => {
         },
 	]
 
+    //Configuracion de la tabla utilizada con tanstack/react-Table
 	const table = useReactTable({
         data: datos,
 		columns,
@@ -60,8 +66,41 @@ const Lac = () => {
 		getSortedRowModel: getSortedRowModel(),
 		state: { sorting, globalFilter: filtering },
 		onSortingChange: setSorting,
-		onGlobalFilteringChange: setFiltering
-	})
+        onGlobalFilteringChange: setFiltering,
+        globalFilterFn: (row, columnId, filterValue) => {
+            const filterLower = filterValue.toLowerCase()
+            return filtrarPorSecuencia(row, filterLower)
+        }
+    })
+
+    //Funcion para filtrar lo que escriba el usuario en el buscador global
+    const filtrarPorSecuencia = (row, filter) => {
+        if (!filter) return false
+
+        for (let cell of row.getVisibleCells()) {
+
+            const cellValue = cell.getValue()?.toString().toLowerCase()
+
+            if (!cellValue) continue
+
+            let filterIndex = 0
+            console.log(filter.length)
+            for (let char of cellValue) {
+                if (char === filter[filterIndex]) {
+                    if (filterIndex === filter.length - 1) return true
+                } else {
+                    break
+                }
+                filterIndex = filterIndex + 1
+
+                if (filterIndex > filter.length) {
+                    console.log("EL indice es mas grande", filterIndex)
+                    break
+                }
+            }
+        }
+        return false
+    }
 
 	return (
 		<>

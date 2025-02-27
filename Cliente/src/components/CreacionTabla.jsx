@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import InputGroup from 'react-bootstrap/InputGroup'
@@ -8,6 +8,8 @@ import Servicio from '../Servicios/Servicio'
 import { useNavigate } from 'react-router-dom'
 
 const MostrarFilas = ({ columnas, setColumnas }) => {
+
+    //Manejo para el ingreso de las variables nombre
     const handleChangeNombre = (index, value) => {
         setColumnas((prev) =>
             prev.map((columna, i) =>
@@ -16,6 +18,7 @@ const MostrarFilas = ({ columnas, setColumnas }) => {
         )
     }
 
+    //Manejo para la seleccion de los tipos de columnas
     const handleChangeType = (index, type) => {
         setColumnas((prev) =>
             prev.map((columna, i) =>
@@ -27,7 +30,7 @@ const MostrarFilas = ({ columnas, setColumnas }) => {
         <>
             {columnas.map((columna, index) => (
                 <InputGroup className="mb-3" key={index}>
-                    <InputGroup.Text>Nombre columna {index + 1} </InputGroup.Text>
+                    <InputGroup.Text>Columna {index + 1} </InputGroup.Text>
                     <Form.Control
                         value={columna.nombre || ''}
                         onChange={(e) => handleChangeNombre(index, e.target.value)}
@@ -54,19 +57,19 @@ const MostrarFilas = ({ columnas, setColumnas }) => {
                                 value={columna.tipo || ''}
                                 onClick={(e) => handleChangeType(index, 'varchar(100)')}
                             >
-                                Texto Grande (100)
+                                Texto Grande (100 letras)
                             </Dropdown.Item>
                             <Dropdown.Item
                                 value={columna.tipo || ''}
                                 onClick={(e) => handleChangeType(index, 'varchar(50)')}
                             >
-                                Texto mediano (50)
+                                Texto mediano (50 letras)
                             </Dropdown.Item>
                             <Dropdown.Item
                                 value={columna.tipo || ''}
                                 onClick={(e) => handleChangeType(index, 'varchar(20)')}
                             >
-                                Texto chico (20)
+                                Texto chico (20 letras)
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -80,19 +83,34 @@ const MostrarFilas = ({ columnas, setColumnas }) => {
 const CreacionTabla = () => {
     const [columnas, setColumnas] = useState([])
     const [nombreTabla, setnombreTabla] = useState()
+    const [categorias, setCategorias] = useState()
     const navigate = useNavigate()
 
+    //Funcion para agregar columna
     const agregarColumnas = () => {
         setColumnas((prev) =>
             [...prev, { nombre: '', tipo: '' }]
         )
     }
+
+    //Funcion para eliminar columna
     const eliminarColumna = () => {
         setColumnas((prev) => {
             return prev.slice(0, prev.length - 1)
         })
     }
 
+    //Funcion para conseguir las categorias existentes
+    useEffect(() => {
+        const fetchDatos = async () => {
+            const respuesta = await Servicio.creacionEquipo()
+            setCategorias(respuesta)
+            console.log(respuesta)
+        }
+        fetchDatos()
+    }, [])
+
+    //Funcion para subir la informacion a la base de datos
     const subirTabla = async (e) => {
         e.preventDefault()
 
@@ -102,6 +120,11 @@ const CreacionTabla = () => {
         }
         if (columnas.some(col => !col.nombre | !col.tipo)) {
             alert('Todas las columnsa deben tener nombre y tipo')
+            return
+        }
+
+        if (categorias.some(item => item.TABLE_NAME === nombreTabla)) {
+            window.alert("Ya existe la categoria")
             return
         }
 
@@ -115,9 +138,9 @@ const CreacionTabla = () => {
             const respuesta = await Servicio.subirTabla(datoTabla)
             console.log(respuesta)
             alert('Tabla creada con exito')
-            respuesta ? navigate("/CreacionEquipo") : null
         } catch (error) {
             console.error("Hubo error en la peticion", error)
+            window.alert(error)
         }
     }
 
@@ -144,7 +167,7 @@ const CreacionTabla = () => {
                     </ButtonGroup>
                     <br />
                     <br />
-                    <Button type="submit">Anadir tabla</Button>
+                    <Button type="submit" onClick={() => navigate('/home') }>Anadir tabla</Button>
                 </Form.Group>
             </Form>
             

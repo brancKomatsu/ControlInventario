@@ -7,5 +7,8 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         port: 51915,
+    },
+    build: {
+        chunkSizeWarningLimit: 1000
     }
 })
